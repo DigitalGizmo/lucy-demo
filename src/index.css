@@ -114,3 +114,7 @@ a.caption-link {
 #thing10 p.gallery-text {
   height: 10em;
 }
+
+.don-last-page {
+  background-color: white;
+}
