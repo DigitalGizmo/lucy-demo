@@ -7,6 +7,23 @@ import { images, captions } from './LucyContent';
 const Lucy = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
+  const dissolve = {
+    initial: { 
+      opacity: 0,
+      position: 'absolute',
+      top: 77, // works w main nav scrolling away
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 2 },
+      transitionEnd: { position: 'static'}
+    },
+    exit: { 
+      opacity: 0,
+      position: 'static',
+      transition: { duration: 2 }
+    }
+  }
 
   const onCaptionChange = (isInView, imgIndex) => {
     // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));
@@ -43,21 +60,10 @@ const Lucy = () => {
               <AnimatePresence initial={false}>
                 <motion.div
                   key={imageName}
-                  initial={{ 
-                    opacity: 0,
-                    position: 'absolute',
-                    top: 77, // works w main nav scrolling away
-                  }}
-                  animate={{
-                    opacity: 1,
-                    transition: { duration: 2 },
-                    transitionEnd: { position: 'static'}
-                  }}
-                  exit={{ 
-                    opacity: 0,
-                    position: 'static',
-                    transition: { duration: 2 }
-                  }}                
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants = { dissolve }               
                 >
                   <img 
                     alt={imageName}
