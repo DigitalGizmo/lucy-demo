@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ====================== */
+/*        GENERAL from pur-app-r        */
+/* ====================== */
+html {
+  background-color: #353526;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  /*color: #e4e0c7;*/
+  color:  #E6E7D8;
+  font-family: "itc-officina-sans-pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;  
+}
+
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+
+/* ======================= */
+/*     NEWBURGH SCROLL     */
+/* ======================= */
+.main-section {
+  position: relative;
+}
+
+.image-panel {
+  height: 80vh;
+  position: relative;
+}
+
+.section-title {
+  color: #D17316;
+  font-size: 2em;
+  font-weight: bold;
+  left: 3%;
+  position: fixed;
+  text-shadow: 1px 1px black;
+  top: 10%;
+}
+
+.image-panel-outer-div {
+  position: fixed;
+  top: 100;
+  left: 10;
+}
+
+.chapter-title /* JJ cf: header.basic-page styles5 */ {
+  background-color: #B25900;
+  /* margin-top: 24px; */
+  padding: .5em 3%;
+  text-align: center;
+}
+
+.chapter-title h1 {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+.caption-panel {
+  position: relative;
+  z-index: 10;
+  margin: 1em 1em 1em 50%;
+  width: 100%;
+}
+
+.caption-panel div {
+  background-color: rgba(53, 53, 38, 0.8);
+  border: 1px solid #BDBEA7;
+  margin-bottom: 95vh;
+  padding: 1em;
+  margin-top: -10em;
+  width: 40%;
+}
+
+.caption-panel div.narrower {
+  width: 30%;
+}
+
+.caption-panel div p.gallery-caption {
+  width: 25%;
+  font-size: 0.75em;
+  float: left;
+}
+
+.caption-panel div p.gallery-quote {
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.caption-panel div p.gallery-text {
+  font-size: 1em;
+  font-style: normal;
+}
+
+.caption-panel div h4 {
+  font-weight: bold;
+}
+
+a.caption-link {
+  color: #B25900;
+  text-decoration: underline;
+}
+
+#thing10 p.gallery-text {
+  height: 10em;
 }
