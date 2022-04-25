@@ -5,7 +5,7 @@ import { images, captions } from './LucyContent';
 // import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
-  const NUM_CAPTIONS = 8;
+  const NUM_CAPTIONS = 11;
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [isPinned, setIsPinned] = useState(true);
@@ -24,6 +24,9 @@ const Lucy = () => {
     (1/NUM_CAPTIONS)*7, // illus_08 lucy hands pkg to cesar
     (1/NUM_CAPTIONS)*8, // illus_09 cesar close up
     (1/NUM_CAPTIONS)*9, // illus_10 lucy close up
+    (1/NUM_CAPTIONS)*10, // illus_10 lucy close up
+    (1/NUM_CAPTIONS)*11, // illus_10 lucy close up
+    (1/NUM_CAPTIONS)*12, // illus_10 lucy close up
   ];
   const sScale = useTransform(
     scrollYProgress,
@@ -60,19 +63,20 @@ const Lucy = () => {
             setImageName(images[4])
         } else if (value >= thresholds[6] && value < thresholds[7]) {
             setImageName(images[5])
-            setIsPinned(true)
-        } else if (value >= thresholds[7]) {
+        } else if (value >= thresholds[7] && value < thresholds[8]) {
             setImageName(images[6])
-            setIsPinned(false)
+        } else if (value >= thresholds[8] && value < thresholds[9]) {
+            setImageName(images[7])
+        } else if (value >= thresholds[9] && value < thresholds[10]) {
+            setImageName(images[8])
+        } else if (value >= thresholds[10] && value < thresholds[11]) {
+            setImageName(images[9])
+        } else if (value >= thresholds[11] && value < thresholds[12]) {
+            setImageName(images[10])
+        } else if (value >= thresholds[12] ) {
+            setImageName(images[11])
 
-        // } else if (value >= thresholds[8] ) {
-            // setImageName(images[8])
-        // } else if (value >= thresholds[9] && value < thresholds[10]) {
-        //     setImageName(images[9])
-        // } else if (value >= thresholds[10] && value < thresholds[11]) {
-        //     setImageName(images[10])
-        // } else if (value >= thresholds[11]) {
-        //     setImageName(images[11])
+        // setIsPinned(true)
         }
     })
 }, [scrollYProgress])
@@ -155,10 +159,10 @@ const Lucy = () => {
         </div>
         <div className="don-last-page">
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p><p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p><p> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p><p> ut labore et dolore magna aliqua. Ut enim </p><p>ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </p><p>irure dolor in reprehenderit in voluptate velit esse</p><p> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p><p> deserunt mollit anim id est laborum.
           </p>
         </div>
 
