@@ -141,7 +141,7 @@ const Lucy = () => {
                 animate="animate"
                 exit="exit"
                 variants = { dissolve }
-                style={{ x: sX , scale: sScale}}
+                // style={{ x: sX , scale: sScale}}
                 //  x: scrollAction    , scale: vScale         
               >
                 <img 
