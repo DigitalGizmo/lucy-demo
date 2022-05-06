@@ -1,30 +1,16 @@
 const images = [
-  'illus_01',
-  'illus_02',
-  'illus_03',
-  'frame4',
-  'frame5',
-  'frame6',
-  'frame7',
-  'frame8',
-  'frame9',
-  'frame10',
+  '01-dark-house.jpg',//comment here
+  '02-dawn-house.jpg',
+  '03-candle.jpg',
+  '04-house-cutaway.jpg',
+  '05-lucy-hearth.jpg',
+  '06-cesar-hens.jpg',
+  '01-dark-house.jpg',//repeating images
+  '02-dawn-house.jpg',
+  '03-candle.jpg',
+  '04-house-cutaway.jpg',
 ];
 
-const sectionTitles = [
-  'The View from Above',
-  'East Newburgh',
-  'The Appraiser\'s Advice',
-  'Good, Fair, Deteriorating, Deteriorated',
-  'Missing from the Planners\' Perspective',
-  'The Homeowners\' Perspective',
-  'Preservation and Demolition',
-  'Repackaging East Newburgh',
-  'A New Map of East Newburgh',
-  'Middle-class Comforts',
-  'Urban Amenities',
-  'Plan vs. Reality',  
-]
   const captions = [
     {
       label: '1st image',
@@ -75,5 +61,4 @@ const sectionTitles = [
 
 
 export {images}
-export {sectionTitles}
 export {captions}

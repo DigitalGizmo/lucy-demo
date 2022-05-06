@@ -85,7 +85,7 @@ const Lucy = () => {
     initial: { 
       opacity: 0,
       position: 'absolute',
-      top: 77, // works w main nav scrolling away
+      top: 52, // works w main nav scrolling away
     },
     animate: {
       opacity: 1,
@@ -132,7 +132,7 @@ const Lucy = () => {
           <div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>
           {/* <div className='image-panel-outer-div'> */}
             <div id="chapter1-title" className="chapter-title">
-              <h1>Newburgh from the Planner's Perspective</h1>
+              <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
             </div>
             <AnimatePresence initial={false}>
               <motion.div
@@ -146,7 +146,7 @@ const Lucy = () => {
               >
                 <img 
                   alt={imageName}
-                  src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}.jpg`}
+                  src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
                 />
               </motion.div>
             </AnimatePresence>
