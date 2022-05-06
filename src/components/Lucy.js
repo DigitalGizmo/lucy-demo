@@ -133,7 +133,7 @@ const Lucy = () => {
   return (
     <section className='main-section'>    
       <div className="chapter-title">
-        <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
+        <h1>Lucy Terry Prince - Enslaved at the Wells&rsquo; House</h1>
       </div>
       <div className="image-panel"> 
         <div className={`dummy ${isPinned ? "image-panel-outer-div" : "hidden"} `}>
