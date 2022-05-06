@@ -1,5 +1,5 @@
 /* ====================== */
-/*        GENERAL from pur-app-r        */
+/*    GENERAL from pur-app-r        */
 /* ====================== */
 html {
   background-color: #353526;
@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  /*color: #e4e0c7;*/
   color:  #E6E7D8;
   font-family: "itc-officina-sans-pro", sans-serif;
   font-size: 1.25em;
@@ -19,15 +18,13 @@ body {
   margin: 0;  
 }
 
-
 img {/* are these styles doing anything? */
   margin: 0;
   max-width: 100%;
 }
 
-
 /* ======================= */
-/*     NEWBURGH SCROLL     */
+/*     LUCY SCROLL     */
 /* ======================= */
 .main-section {
   position: relative;
@@ -35,12 +32,11 @@ img {/* are these styles doing anything? */
 
 .image-panel {
   height: 80vh;
-  position: relative;
 }
 
 .image-panel-outer-div {
   position: fixed;
-/*  top: 100; these dont seem to be nec - jj
+/*top: 100; these dont seem to be nec - jj
   left: 10;*/
 }
 

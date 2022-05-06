@@ -125,13 +125,11 @@ const Lucy = () => {
 
   return (
     <div>
-      <section id="chapter1" className='main-section'>    
-        <div id="image-sequence1" className="image-panel"> 
-          {/* <div className={ pinned === true ? 'image-panel-outer-div' : '' }> */}
-          {/* className={`cap ${highlights[index] ? "hi-text" : ""} `} */}
-          <div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>
-          {/* <div className='image-panel-outer-div'> */}
-            <div id="chapter1-title" className="chapter-title">
+      <section className='main-section'>    
+        <div className="image-panel"> 
+          {/*<div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>*/}
+           <div className='image-panel-outer-div'>
+            <div className="chapter-title">
               <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
             </div>
             <AnimatePresence initial={false}>
@@ -154,7 +152,7 @@ const Lucy = () => {
           </div>
         </div>{/*  /image-panel */}
 
-        <div id="caption-sequence1" className="caption-panel">
+        <div className="caption-panel">
           { captionDissolves }
         </div>
         <div className="don-last-page">
