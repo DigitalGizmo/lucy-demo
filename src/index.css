@@ -18,7 +18,8 @@ body {
   margin: 0;  
 }
 
-img {/* are these styles doing anything? */
+/* are these styles doing anything? */
+img {
   margin: 0;
   max-width: 100%;
 }
@@ -32,13 +33,14 @@ img {/* are these styles doing anything? */
 
 .image-panel {
   height: 80vh;
-  position: relative;
-  margin-top: 200px;
-  position: fixed;
+  /* Has to be relaitve so that captions start/stack below this */
+  position: relative; 
+  margin-top: 60px;
+  /* position: fixed; */
 }
 
 .image-panel-outer-div {
-/*  position: fixed;*/
+ position: fixed;
 /*top: 100; these dont seem to be nec - jj
   left: 10;*/
 }
@@ -51,6 +53,8 @@ img {/* are these styles doing anything? */
   top: 0;
   width: 100%;
   height:  60px;
+  /* Don adding */
+  z-index: 50;
 }
 
 .chapter-title h1 {
@@ -62,7 +66,7 @@ img {/* are these styles doing anything? */
 .caption-panel {
   position: relative;
   z-index: 10;
-  margin: 1em 1em 1em 50%;
+  margin: 60px 1em 1em 50%;
   width: 100%;
 }
 

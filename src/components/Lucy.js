@@ -130,7 +130,7 @@ const Lucy = () => {
       </div>
       <div className="image-panel"> 
       {/*<div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>*/}
-       {/*<div className='image-panel-outer-div'>*/}
+       <div className='image-panel-outer-div'>
 
         <AnimatePresence initial={false}>
           <motion.div
@@ -149,7 +149,7 @@ const Lucy = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/*</div>*/}
+        </div>
       </div>{/*  /image-panel */}
 
       <div className="caption-panel">
