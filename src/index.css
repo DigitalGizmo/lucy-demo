@@ -110,4 +110,6 @@ a.caption-link {
 
 .don-last-page {
   background-color: white;
+  z-index: 90;
 }
+

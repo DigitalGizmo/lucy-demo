@@ -5,7 +5,7 @@ import { images, captions } from './LucyContent';
 // import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
-  const NUM_CAPTIONS = 11;
+  const NUM_CAPTIONS = 9;
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [isPinned, setIsPinned] = useState(true);
@@ -25,8 +25,8 @@ const Lucy = () => {
     (1/NUM_CAPTIONS)*8, // illus_09 cesar close up
     (1/NUM_CAPTIONS)*9, // illus_10 lucy close up
     (1/NUM_CAPTIONS)*10, // illus_10 lucy close up
-    (1/NUM_CAPTIONS)*11, // illus_10 lucy close up
-    (1/NUM_CAPTIONS)*12, // illus_10 lucy close up
+    // (1/NUM_CAPTIONS)*11, // illus_10 lucy close up
+    // (1/NUM_CAPTIONS)*12, // illus_10 lucy close up
   ];
   const sScale = useTransform(
     scrollYProgress,
@@ -68,15 +68,16 @@ const Lucy = () => {
         } else if (value >= thresholds[8] && value < thresholds[9]) {
             setImageName(images[7])
         } else if (value >= thresholds[9] && value < thresholds[10]) {
-            setImageName(images[8])
-        } else if (value >= thresholds[10] && value < thresholds[11]) {
-            setImageName(images[9])
-        } else if (value >= thresholds[11] && value < thresholds[12]) {
-            setImageName(images[10])
-        } else if (value >= thresholds[12] ) {
-            setImageName(images[11])
+            // setImageName(images[8])
+            setIsPinned(true)
+        // } else if (value >= thresholds[10] && value < thresholds[11]) {
+        //     setImageName(images[9])
+        // } else if (value >= thresholds[11] && value < thresholds[12]) {
+        //     setImageName(images[10])
+        } else if (value >= thresholds[10] ) {
+            // setImageName(images[8])
+            setIsPinned(true)
 
-        // setIsPinned(true)
         }
     })
 }, [scrollYProgress])
@@ -129,25 +130,25 @@ const Lucy = () => {
         <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
       </div>
       <div className="image-panel"> 
-      {/*<div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>*/}
-       <div className='image-panel-outer-div'>
+        {/* <div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}> */}
+        <div className='image-panel-outer-div'>
 
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={imageName}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants = { dissolve }
-            style={{ x: sX , scale: sScale}}
-            //  x: scrollAction    , scale: vScale         
-          >
-            <img 
-              alt={imageName}
-              src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
-            />
-          </motion.div>
-        </AnimatePresence>
+          <AnimatePresence initial={false}>
+            <motion.div
+              key={imageName}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants = { dissolve }
+              style={{ x: sX , scale: sScale}}
+              //  x: scrollAction    , scale: vScale         
+            >
+              <img 
+                alt={imageName}
+                src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
+              />
+            </motion.div>
+          </AnimatePresence>
 
         </div>
       </div>{/*  /image-panel */}
