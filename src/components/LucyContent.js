@@ -9,6 +9,7 @@ const images = [
   '02-dawn-house.jpg',
   '03-candle.jpg',
   '04-house-cutaway.jpg',
+  '01-dark-house.jpg',//comment here
 ];
 
   const captions = [

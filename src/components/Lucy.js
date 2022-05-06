@@ -85,7 +85,7 @@ const Lucy = () => {
     initial: { 
       opacity: 0,
       position: 'absolute',
-      top: 52, // works w main nav scrolling away
+      top: 0, // works w main nav scrolling away
     },
     animate: {
       opacity: 1,
@@ -124,48 +124,47 @@ const Lucy = () => {
   })
 
   return (
-    <div>
-      <section className='main-section'>    
-        <div className="image-panel"> 
-          {/*<div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>*/}
-           <div className='image-panel-outer-div'>
-            <div className="chapter-title">
-              <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
-            </div>
-            <AnimatePresence initial={false}>
-              <motion.div
-                key={imageName}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants = { dissolve }
-                // style={{ x: sX , scale: sScale}}
-                //  x: scrollAction    , scale: vScale         
-              >
-                <img 
-                  alt={imageName}
-                  src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
-                />
-              </motion.div>
-            </AnimatePresence>
+    <section className='main-section'>    
+      <div className="chapter-title">
+        <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
+      </div>
+      <div className="image-panel"> 
+      {/*<div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}>*/}
+       {/*<div className='image-panel-outer-div'>*/}
 
-          </div>
-        </div>{/*  /image-panel */}
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={imageName}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants = { dissolve }
+            style={{ x: sX , scale: sScale}}
+            //  x: scrollAction    , scale: vScale         
+          >
+            <img 
+              alt={imageName}
+              src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
+            />
+          </motion.div>
+        </AnimatePresence>
 
-        <div className="caption-panel">
-          { captionDissolves }
-        </div>
-        <div className="don-last-page">
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p><p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p><p> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p><p> ut labore et dolore magna aliqua. Ut enim </p><p>ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </p><p>irure dolor in reprehenderit in voluptate velit esse</p><p> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p><p> deserunt mollit anim id est laborum.
-          </p>
-        </div>
+        {/*</div>*/}
+      </div>{/*  /image-panel */}
 
-      </section> {/*  /chapter1 */}
-    </div>
+      <div className="caption-panel">
+        { captionDissolves }
+      </div>
+      <div className="don-last-page">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p><p> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p><p> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p><p> ut labore et dolore magna aliqua. Ut enim </p><p>ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute </p><p>irure dolor in reprehenderit in voluptate velit esse</p><p> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p><p> deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+    </section>
   );
 } // end Newburg function
 
