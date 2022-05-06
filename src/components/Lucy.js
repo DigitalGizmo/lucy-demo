@@ -51,6 +51,9 @@ const Lucy = () => {
     ],
     [0, 40, 40, 20, -25]
   )  
+  // useEffect(() => {
+  //   console.log('isPinned changed: ' + isPinned);
+  // },[isPinned])
   useEffect(() => {
     scrollYProgress.onChange((value) => {
         if (value < thresholds[1]) {
@@ -77,12 +80,13 @@ const Lucy = () => {
             setImageName(images[10])
         } else if (value >= thresholds[12] && value < thresholds[13]) {
             setImageName(images[11])
-        } else if (value >= thresholds[13] && value < thresholds[14]) {
             setIsPinned(true)
+        } else if (value >= thresholds[13] && value < thresholds[14]) {
+            setIsPinned(false)
             setImageName(images[12])
         } else if (value >= thresholds[14] ) {
             setImageName(images[12])
-            setIsPinned(true)
+            setIsPinned(false)
 
         }
     })
