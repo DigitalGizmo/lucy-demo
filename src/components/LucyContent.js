@@ -4,7 +4,7 @@ const images = [
   '03-candle.jpg',    // Index 2
   '04-house-cutaway.jpg',
   '05-lucy-hearth.jpg', // Index  4
-  '06-cesar-hens.jpg',
+  '06-cesar-hens.gif',
   '07-interlude.jpg',// Index 6
   '08-night-fallen.jpg',
   '09-moon-risen.jpg', // Index 8
