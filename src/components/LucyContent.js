@@ -1,6 +1,6 @@
 const images = [
-  '01-dark-house.jpg',//comment here
-  '02-dawn-house.jpg', // 1
+  '01-dark-house.jpg',// index 0
+  '02-dawn-house.jpg', // Index 1 (2nd picture)
   '03-candle.jpg',    // 2
   '04-house-cutaway.jpg',
   '05-lucy-hearth.jpg', // 4
@@ -8,9 +8,10 @@ const images = [
   '01-dark-house.jpg',// 6 repeating images
   '02-dawn-house.jpg',
   '03-candle.jpg', // 8
-  // '04-house-cutaway.jpg',
-  // '01-dark-house.jpg',//comment here
-];
+  '04-house-cutaway.jpg',
+  '01-dark-house.jpg',// 10
+  '05-lucy-hearth.jpg', // 
+  '06-cesar-hens.jpg',]; // index 12 (13th picture)
 
   const captions = [
     {
@@ -49,17 +50,28 @@ const images = [
       label: '8 nine',
       text: '<p>frame 8 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
     },
-    // {
-    //   label: 'ten',
-    //   text: '<p>frame 9 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
-    // },
-    // {
-    //   label: 'eleven',
-    //   text: '<p>frame 10 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
-    // },
+    {
+      label: '9 ten',
+      text: '<p>frame 9 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: '10 eleven',
+      text: '<p>frame 10 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: '11 twelve',
+      text: '<p>frame 11 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: '12 Thirteen',
+      text: '<p>frame 12 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: '13 one for the road',
+      text: '<p>frame 13 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
 
   ]
-
 
 export {images}
 export {captions}

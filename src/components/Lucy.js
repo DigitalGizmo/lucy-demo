@@ -5,7 +5,7 @@ import { images, captions } from './LucyContent';
 // import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
-  const NUM_CAPTIONS = 9;
+  const NUM_CAPTIONS = 13;
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [isPinned, setIsPinned] = useState(true);
@@ -24,9 +24,11 @@ const Lucy = () => {
     (1/NUM_CAPTIONS)*7, // illus_08 lucy hands pkg to cesar
     (1/NUM_CAPTIONS)*8, // illus_09 cesar close up
     (1/NUM_CAPTIONS)*9, // illus_10 lucy close up
-    (1/NUM_CAPTIONS)*10, // illus_10 lucy close up
-    // (1/NUM_CAPTIONS)*11, // illus_10 lucy close up
-    // (1/NUM_CAPTIONS)*12, // illus_10 lucy close up
+    (1/NUM_CAPTIONS)*10, // 
+    (1/NUM_CAPTIONS)*11, // 
+    (1/NUM_CAPTIONS)*12, // 
+    (1/NUM_CAPTIONS)*13, // 
+    (1/NUM_CAPTIONS)*14, // 
   ];
   const sScale = useTransform(
     scrollYProgress,
@@ -68,14 +70,18 @@ const Lucy = () => {
         } else if (value >= thresholds[8] && value < thresholds[9]) {
             setImageName(images[7])
         } else if (value >= thresholds[9] && value < thresholds[10]) {
-            // setImageName(images[8])
+            setImageName(images[8])
+        } else if (value >= thresholds[10] && value < thresholds[11]) {
+            setImageName(images[9])
+        } else if (value >= thresholds[11] && value < thresholds[12]) {
+            setImageName(images[10])
+        } else if (value >= thresholds[12] && value < thresholds[13]) {
+            setImageName(images[11])
+        } else if (value >= thresholds[13] && value < thresholds[14]) {
             setIsPinned(true)
-        // } else if (value >= thresholds[10] && value < thresholds[11]) {
-        //     setImageName(images[9])
-        // } else if (value >= thresholds[11] && value < thresholds[12]) {
-        //     setImageName(images[10])
-        } else if (value >= thresholds[10] ) {
-            // setImageName(images[8])
+            setImageName(images[12])
+        } else if (value >= thresholds[14] ) {
+            setImageName(images[12])
             setIsPinned(true)
 
         }
@@ -130,8 +136,8 @@ const Lucy = () => {
         <h1>Lucy Terry Prince - Enslaved at the Wells' House</h1>
       </div>
       <div className="image-panel"> 
-        {/* <div className={`dummy ${isPinned ? "image-panel-outer-div" : ""} `}> */}
-        <div className='image-panel-outer-div'>
+        <div className={`dummy ${isPinned ? "image-panel-outer-div" : "hidden"} `}>
+        {/* <div className='image-panel-outer-div'> */}
 
           <AnimatePresence initial={false}>
             <motion.div
