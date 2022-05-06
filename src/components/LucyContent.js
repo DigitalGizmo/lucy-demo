@@ -1,17 +1,17 @@
 const images = [
   '01-dark-house.jpg',// index 0
   '02-dawn-house.jpg', // Index 1 (2nd picture)
-  '03-candle.jpg',    // 2
+  '03-candle.jpg',    // Index 2
   '04-house-cutaway.jpg',
-  '05-lucy-hearth.jpg', // 4
+  '05-lucy-hearth.jpg', // Index  4
   '06-cesar-hens.jpg',
-  '01-dark-house.jpg',// 6 repeating images
-  '02-dawn-house.jpg',
-  '03-candle.jpg', // 8
-  '04-house-cutaway.jpg',
-  '01-dark-house.jpg',// 10
-  '05-lucy-hearth.jpg', // 
-  '06-cesar-hens.jpg',]; // index 12 (13th picture)
+  '07-interlude.jpg',// Index 6
+  '08-night-fallen.jpg',
+  '09-moon-risen.jpg', // Index 8
+  '10-door-open.jpg',
+  '11-package.jpg', // Index 10
+  '12-lucy-closeup.jpg', // 
+  '13-stepping-out.jpg',]; // index 12 (13th picture)
 
   const captions = [
     {
