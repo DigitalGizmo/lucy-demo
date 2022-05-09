@@ -7,13 +7,13 @@ const images = [
   '06-cesar-hens.gif',
   '07-interlude.jpg',// Index 6
   '08-night-fallen-anim.gif', // Night has fallen, Lucy continues
-  // '09-moon-risen.jpg', // Index 8
-  '10-door-open.jpg',
-  '11-package.jpg', // Index 10
-  '12-lucy-closeup.jpg', // 
-  '13-stepping-out.jpg', // 12
-  'black-screen.jpg', // 13
+  '10-door-open.jpg',// 8
+  '11-package.jpg', // Index 
+  '12-lucy-closeup.jpg', // 10
+  '13-stepping-out.jpg', // 11 
+  'black-screen.jpg', // 12
 ]; // index 12 (13th picture)
+// '09-moon-risen.jpg', // Index 8
 
   const captions = [
     {
