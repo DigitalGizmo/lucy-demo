@@ -5,7 +5,7 @@ import { images, captions } from './LucyContent';
 // import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
-  const NUM_CAPTIONS = 13;
+  const NUM_CAPTIONS = 12;
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [isPinned, setIsPinned] = useState(true);
@@ -38,7 +38,7 @@ const Lucy = () => {
         thresholds[5],
         thresholds[6],
     ],
-    [1, 1.5, 1.5, 1]
+    [1, 2, 1, 1]
   );
   const sX = useTransform(
     scrollYProgress,
@@ -49,7 +49,7 @@ const Lucy = () => {
         thresholds[6],
         thresholds[7],
     ],
-    [0, 40, 40, 20, -25]
+    [0, 360, 0, 0, 0]
   )  
   // useEffect(() => {
   //   console.log('isPinned changed: ' + isPinned);
@@ -60,25 +60,25 @@ const Lucy = () => {
             setImageName(images[0])
         } else if (value >= thresholds[1] && value < thresholds[2]) {
             setImageName(images[1])
-        } else if (value >= thresholds[2] && value < thresholds[4]) { // hold
+        } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
             setImageName(images[2])
-        } else if (value >= thresholds[4] && value < thresholds[5]) {
+        } else if (value >= thresholds[3] && value < thresholds[4]) {
             setImageName(images[3])
-        } else if (value >= thresholds[5] && value < thresholds[6]) {
+        } else if (value >= thresholds[4] && value < thresholds[5]) {
             setImageName(images[4])
-        } else if (value >= thresholds[6] && value < thresholds[7]) {
+        } else if (value >= thresholds[5] && value < thresholds[6]) {
             setImageName(images[5])
-        } else if (value >= thresholds[7] && value < thresholds[8]) {
+        } else if (value >= thresholds[6] && value < thresholds[7]) {
             setImageName(images[6])
-        } else if (value >= thresholds[8] && value < thresholds[9]) {
+        } else if (value >= thresholds[7] && value < thresholds[8]) {
             setImageName(images[7])
-        } else if (value >= thresholds[9] && value < thresholds[10]) {
+        } else if (value >= thresholds[8] && value < thresholds[9]) {
             setImageName(images[8])
-        } else if (value >= thresholds[10] && value < thresholds[11]) {
+        } else if (value >= thresholds[9] && value < thresholds[10]) {
             setImageName(images[9])
-        } else if (value >= thresholds[11] && value < thresholds[12]) {
+        } else if (value >= thresholds[10] && value < thresholds[11]) {
             setImageName(images[10])
-        } else if (value >= thresholds[12] && value < thresholds[13]) {
+        } else if (value >= thresholds[11] && value < thresholds[12]) {
             setImageName(images[11])
             setIsPinned(true)
         } else if (value >= thresholds[13] && value < thresholds[14]) {
@@ -164,6 +164,7 @@ const Lucy = () => {
       </div>{/*  /image-panel */}
 
       <div className="caption-panel">
+        {/* custom first caption */}
         { captionDissolves }
       </div>
       <div className="don-last-page">
