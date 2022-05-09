@@ -6,12 +6,14 @@ const images = [
   '05-lucy-hearth.jpg', // Index  4
   '06-cesar-hens.gif',
   '07-interlude.jpg',// Index 6
-  '08-night-fallen.jpg',
-  '09-moon-risen.jpg', // Index 8
+  '08-night-fallen-anim.gif', // Night has fallen, Lucy continues
+  // '09-moon-risen.jpg', // Index 8
   '10-door-open.jpg',
   '11-package.jpg', // Index 10
   '12-lucy-closeup.jpg', // 
-  '13-stepping-out.jpg',]; // index 12 (13th picture)
+  '13-stepping-out.jpg', // 12
+  'black-screen.jpg', // 13
+]; // index 12 (13th picture)
 
   const captions = [
     {
@@ -60,17 +62,12 @@ const images = [
     },
     {
       label: '11 12th image - ',
-      text: '<p>Enslaved people have odds and ends of free time nearly every day, although they must fit them into a fairly rigid schedule of tasks determined by the season. Because it is now autumn, the schedule is especially demanding: harvesting vegetables and grains, preserving fruits, butchering animals and preserving their meat, and gathering and chopping wood for the winter’s fires. Most of these tasks will employ enslaved people and their enslavers working together.</p>'
+      text: '<p>Enslaved people have odds and ends of free time nearly every day, although they must fit them into a fairly rigid schedule of tasks determined by the season. .</p>'
     },
     {
       label: '12 13th image - ',
-      text: '<p>frame 12 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+      text: '<p>Because it is now autumn, the schedule is especially demanding: harvesting vegetables and grains, preserving fruits, butchering animals and preserving their meat, and gathering and chopping wood for the winter’s fires. Most of these tasks will employ enslaved people and their enslavers working together</p>'
     },
-    {
-      label: '13 one for the road',
-      text: '<p>frame 13 Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
-    },
-
   ]
 
 export {images}

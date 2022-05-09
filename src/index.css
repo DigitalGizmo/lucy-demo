@@ -33,7 +33,7 @@ img {
 
 .image-panel {
   height: 80vh;
-  /* Has to be relaitve so that captions start/stack below this */
+  /* Has to be relative so that captions start/stack below this */
   position: relative; 
   margin-top: 60px;
   /* position: fixed; */
@@ -88,6 +88,7 @@ a.caption-link {
 }
 
 .don-last-page {
+  margin-top: -360px;
   background-color: white;
   z-index: 90;
 }

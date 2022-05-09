@@ -5,7 +5,7 @@ import { images, captions } from './LucyContent';
 // import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
-  const NUM_CAPTIONS = 12;
+  const NUM_CAPTIONS = 14;
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [isPinned, setIsPinned] = useState(true);
@@ -13,6 +13,7 @@ const Lucy = () => {
   const scrollAction = useTransform(
     scrollY, [0, 100], [0, 100]
   );
+  const fudgFactor = .04;
   const thresholds = [
     0, // illus_01
     1/NUM_CAPTIONS, // illus_02 candle lights
@@ -20,23 +21,23 @@ const Lucy = () => {
     (1/NUM_CAPTIONS)*3, // illus_04 working position 1
     (1/NUM_CAPTIONS)*4, // illus_05 working position 2
     (1/NUM_CAPTIONS)*5, // illus_06 black screen
-    (1/NUM_CAPTIONS)*6, // illus_07 friend waits outside
-    (1/NUM_CAPTIONS)*7, // illus_08 lucy hands pkg to cesar
-    (1/NUM_CAPTIONS)*8, // illus_09 cesar close up
-    (1/NUM_CAPTIONS)*9, // illus_10 lucy close up
-    (1/NUM_CAPTIONS)*10, // 
-    (1/NUM_CAPTIONS)*11, // 
-    (1/NUM_CAPTIONS)*12, // 
-    (1/NUM_CAPTIONS)*13, // 
-    (1/NUM_CAPTIONS)*14, // 
+    (1/NUM_CAPTIONS)*6 + fudgFactor , // illus_07 friend waits outside
+    (1/NUM_CAPTIONS)*7 + fudgFactor, // illus_08 lucy hands pkg to cesar
+    (1/NUM_CAPTIONS)*8 + fudgFactor, // illus_09 cesar close up
+    (1/NUM_CAPTIONS)*9 + fudgFactor, // illus_10 lucy close up
+    (1/NUM_CAPTIONS)*10 + fudgFactor, // 
+    (1/NUM_CAPTIONS)*11 + fudgFactor, // 
+    (1/NUM_CAPTIONS)*12 + fudgFactor, // 
+    (1/NUM_CAPTIONS)*13 + fudgFactor, // 
+    (1/NUM_CAPTIONS)*14 + fudgFactor, // 
   ];
   const sScale = useTransform(
     scrollYProgress,
     [
         thresholds[3],
-        thresholds[4],
         thresholds[5],
         thresholds[6],
+        thresholds[7],
     ],
     [1, 2, 1, 1]
   );
@@ -44,10 +45,10 @@ const Lucy = () => {
     scrollYProgress,
     [
         thresholds[3],
-        thresholds[4],
         thresholds[5],
         thresholds[6],
         thresholds[7],
+        thresholds[8],
     ],
     [0, 360, 0, 0, 0]
   )  
@@ -62,32 +63,32 @@ const Lucy = () => {
             setImageName(images[1])
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
             setImageName(images[2])
-        } else if (value >= thresholds[3] && value < thresholds[4]) {
+        } else if (value >= thresholds[3] && value < thresholds[5]) {
             setImageName(images[3])
-        } else if (value >= thresholds[4] && value < thresholds[5]) {
-            setImageName(images[4])
         } else if (value >= thresholds[5] && value < thresholds[6]) {
-            setImageName(images[5])
+            setImageName(images[4])
         } else if (value >= thresholds[6] && value < thresholds[7]) {
-            setImageName(images[6])
+            setImageName(images[5])
         } else if (value >= thresholds[7] && value < thresholds[8]) {
-            setImageName(images[7])
+            setImageName(images[6])
         } else if (value >= thresholds[8] && value < thresholds[9]) {
-            setImageName(images[8])
+            setImageName(images[7])
         } else if (value >= thresholds[9] && value < thresholds[10]) {
-            setImageName(images[9])
+            setImageName(images[8])
         } else if (value >= thresholds[10] && value < thresholds[11]) {
-            setImageName(images[10])
+            setImageName(images[9])
         } else if (value >= thresholds[11] && value < thresholds[12]) {
-            setImageName(images[11])
-            setIsPinned(true)
-        } else if (value >= thresholds[13] && value < thresholds[14]) {
+            setImageName(images[10])
+        } else if (value >= thresholds[12] && value < thresholds[13]) {
+            setImageName(images[11]) // stepping out, last image
+            // console.log('value between 12 and 13: ' + value)
+        } else if (value >= thresholds[13] ) { // && value < thresholds[14]
             setIsPinned(false)
-            setImageName(images[12])
-        } else if (value >= thresholds[14] ) {
-            setImageName(images[12])
-            setIsPinned(false)
-
+            // setImageName(images[12])
+            // console.log('value between 13 and 14: ' + value);
+        // } else if (value >= thresholds[14] ) {
+        //     console.log('value over 14: ' + value);
+            // setImageName(images[13])
         }
     })
 }, [scrollYProgress])
