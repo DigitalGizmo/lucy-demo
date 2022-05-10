@@ -126,8 +126,8 @@ const Lucy = () => {
       <div className="image-panel"> 
 
 
-      <div class="sidebar-parent">
-        <span class="sidebar">
+      <div className="sidebar-parent">
+        <span className="sidebar">
           <a href="../index.html?mocknum=21">MORE</a>
         </span>
 
