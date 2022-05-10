@@ -96,3 +96,48 @@ a.caption-link {
 .hidden {
   display: none;
 }
+
+/* these styles might be relevant only to the city story - should they get moved? */
+.sidebar-parent {
+  overflow: visible;
+  position: fixed;
+  left: -350px;
+  width: 350px;
+/*  height: 400px;*/
+  top: 25vh;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  z-index: 100;
+}
+
+.sidebar-parent:hover {
+  /* opacity: 1; */
+  left: 0px;
+}
+.sidebar {
+  background-color: dodgerblue;
+  border-radius: 0 0 3px 3px;
+  padding: 1.25em 1em 0.25em 1em;
+  position: absolute;
+  top: 60%;
+  /*top: 318px;*/
+  left: 330px;
+  /*width: 318px;*/
+  text-align: center;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+
+.sidebar a {
+  color: #fff;
+  font-size: 1em;
+}
+
+.sidebar-parent article {
+  background-color: #fff;
+  color: #333;
+  font-size: .75em;
+  padding: 1em 3em 1em 1em;
+  margin: 0;
+}

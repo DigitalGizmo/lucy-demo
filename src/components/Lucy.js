@@ -141,6 +141,20 @@ const Lucy = () => {
         <h1>Lucy Terry Prince - Enslaved at the Wells&rsquo; House</h1>
       </div>
       <div className="image-panel"> 
+
+
+      <div class="sidebar-parent">
+        <span class="sidebar">
+          <a href="../index.html?mocknum=21">MORE</a>
+        </span>
+
+        <article>
+          <h2>related to this</h2>
+          <p>This is the contextual material that related precisely to the image currently being shown. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </div>
+
+
         <div className={`dummy ${isPinned ? "image-panel-outer-div" : "hidden"} `}>
         {/* <div className='image-panel-outer-div'> */}
 

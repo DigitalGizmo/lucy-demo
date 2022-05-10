@@ -6,8 +6,8 @@ const images = [
   '05-lucy-hearth.jpg', // Index  4
   '06-cesar-hens.gif',
   '07-interlude.jpg',// Index 6
-  '08-night-fallen-anim.gif', // Night has fallen, Lucy continues
-  '10-door-open.jpg',// 8
+  '08-night-fallen-anim.gif', // Night has fallen, moon rises
+  '10-door-open.jpg',// 8 friend in yard
   '11-package.jpg', // Index 
   '13-stepping-out.jpg', // 11 
   '12-lucy-closeup.jpg', // 10
