@@ -9,8 +9,8 @@ const images = [
   '08-night-fallen-anim.gif', // Night has fallen, Lucy continues
   '10-door-open.jpg',// 8
   '11-package.jpg', // Index 
-  '12-lucy-closeup.jpg', // 10
   '13-stepping-out.jpg', // 11 
+  '12-lucy-closeup.jpg', // 10
   'black-screen.jpg', // 12
 ]; // index 12 (13th picture)
 // '09-moon-risen.jpg', // Index 8
@@ -49,24 +49,24 @@ const images = [
       text: '<p>Note: note to viewers of this mockup: the narrative continues to follow the activities of Lucy, Cesar and the Wells through their day. For this mockup, we&apos;ll jump ahead to the end of the day&hellip;</p>'
     },
     {
-      label: '8 9th image - ',
-      text: '<p>Night has fallen, and Lucy continues to work, cleaning up the dinner dishes by candlelight.  Caesar stokes and banks the fire for the night and then prepares to go out, this time on an errand of his own.</p>'
+      label: '8 9th image - moon rise animation',
+      text: '<p>Night has fallen, and Lucy continues to work, cleaning up the dinner dishes by candlelight. Caesar has returned from errands he was on for Ebenezer earlier in the day.</p>'
     },
     {
-      label: '9 10th image - ',
-      text: '<p>He plans to meet one of his friends for a leisurely walk—she is waiting for him in the yard behind the Wells house.</p>'
+      label: '9 10th image - friend in yard',
+      text: '<p>Caesar stokes and banks the fire for the night and then prepares to go out, this time on an errand of his own. He plans to meet one of his friends for a leisurely walk—she is waiting for him in the yard behind the Wells house.</p>'
     },
     {
-      label: '10 11th image - ',
-      text: '<p>She is a friend of Lucy&rsquo;s, too, and Lucy gives Caesar a package for her, asking him to relay a message proposing that the two young women meet sometime the following day.</p>'
+      label: '10 11th image - lucy hands cesar package',
+      text: '<p>She is a friend of Lucy&apos;s, too, and Lucy gives Caesar a package for her, asking him to relay a message proposing that the two young women meet sometime the following day.</p>'
     },
     {
-      label: '11 12th image - ',
-      text: '<p>Enslaved people have odds and ends of free time nearly every day, although they must fit them into a fairly rigid schedule of tasks determined by the season. .</p>'
+      label: '11 12th image - cesar and friend leaving',
+      text: '<p>Cesar and Lucy are eager to hear news from other households and share their own updates.</p>'
     },
     {
-      label: '12 13th image - ',
-      text: '<p>Because it is now autumn, the schedule is especially demanding: harvesting vegetables and grains, preserving fruits, butchering animals and preserving their meat, and gathering and chopping wood for the winter’s fires. Most of these tasks will employ enslaved people and their enslavers working together</p>'
+      label: '12 13th image - close up of lucy ',
+      text: '<p>Lucy is anxious, apprehensive, and excited. She worries that Wells&apos; will discover that Caesar has been out.</p>'
     },
   ]
 
