@@ -9,8 +9,8 @@ const images = [
   '08-night-fallen-anim.gif', // Night has fallen, moon rises
   '10-door-open.jpg',// 8 friend in yard
   '11-package.jpg', // Index 
-  '13-stepping-out.jpg', // 11 
-  '12-lucy-closeup.jpg', // 10
+  '13-stepping-out.jpg', // 10 
+  '12-lucy-closeup.jpg', // 11
   'black-screen.jpg', // 12
 ]; // index 12 (13th picture)
 // '09-moon-risen.jpg', // Index 8
