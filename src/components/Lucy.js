@@ -2,17 +2,16 @@ import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence, useViewportScroll, useTransform } from 'framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
 import { images, captions } from './LucyContent';
-// import CaptionDissolve from './CaptionDissolve';
 
 const Lucy = () => {
   const NUM_CAPTIONS = 14;
-  const [imageIndex, setImageIndex] = useState(0);
-  const [imageName, setImageName] = useState(images[imageIndex]);
+  const [imageName, setImageName] = useState(images[0]);
   const [isPinned, setIsPinned] = useState(true);
-  const { scrollY, scrollYProgress } = useViewportScroll();
-  const scrollAction = useTransform(
-    scrollY, [0, 100], [0, 100]
-  );
+  const { scrollYProgress } = useViewportScroll(); // scrollY, 
+  const [isZoomable, setIsZoomable] = useState(true);
+  // const scrollAction = useTransform(
+  //   scrollY, [0, 100], [0, 100]
+  // );
   const fudgFactor = .04;
   const thresholds = [
     0, // illus_01
@@ -39,7 +38,7 @@ const Lucy = () => {
         thresholds[6],
         thresholds[7],
     ],
-    [1, 2, 1, 1]
+    [1, 2, 2, 1]
   );
   const sX = useTransform(
     scrollYProgress,
@@ -50,48 +49,44 @@ const Lucy = () => {
         thresholds[7],
         thresholds[8],
     ],
-    [0, 360, 0, 0, 0]
+    [0, 360, 360, 0, 0]
   )  
-  // useEffect(() => {
-  //   console.log('isPinned changed: ' + isPinned);
-  // },[isPinned])
+
   useEffect(() => {
     scrollYProgress.onChange((value) => {
         if (value < thresholds[1]) {
-            setImageName(images[0])
+          setImageName(images[0])
         } else if (value >= thresholds[1] && value < thresholds[2]) {
-            setImageName(images[1])
+          setImageName(images[1])
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
-            setImageName(images[2])
+          setImageName(images[2])
         } else if (value >= thresholds[3] && value < thresholds[5]) {
-            setImageName(images[3])
+          setIsZoomable(true)
+          setImageName(images[3]) // zoom into downstairs
         } else if (value >= thresholds[5] && value < thresholds[6]) {
-            setImageName(images[4])
+          setIsZoomable(false)
+          setImageName(images[4]) // Lucy at hearth
         } else if (value >= thresholds[6] && value < thresholds[7]) {
-            setImageName(images[5])
+          setImageName(images[5])
         } else if (value >= thresholds[7] && value < thresholds[8]) {
-            setImageName(images[6])
+          setImageName(images[6])
         } else if (value >= thresholds[8] && value < thresholds[9]) {
-            setImageName(images[7])
+          setImageName(images[7])
         } else if (value >= thresholds[9] && value < thresholds[10]) {
-            setImageName(images[8])
+          setImageName(images[8])
         } else if (value >= thresholds[10] && value < thresholds[11]) {
-            setImageName(images[9])
+          setImageName(images[9])
         } else if (value >= thresholds[11] && value < thresholds[12]) {
-            setImageName(images[10])
+          setImageName(images[10])
         } else if (value >= thresholds[12] && value < thresholds[13]) {
-            setImageName(images[11]) // stepping out, last image
-            // console.log('value between 12 and 13: ' + value)
+          setIsPinned(true)
+          setImageName(images[11]) // stepping out, last image
+          // console.log('value between 12 and 13: ' + value)
         } else if (value >= thresholds[13] ) { // && value < thresholds[14]
-            setIsPinned(false)
-            // setImageName(images[12])
-            // console.log('value between 13 and 14: ' + value);
-        // } else if (value >= thresholds[14] ) {
-        //     console.log('value over 14: ' + value);
-            // setImageName(images[13])
+          setIsPinned(false)
         }
     })
-}, [scrollYProgress])
+}, [scrollYProgress, thresholds])
 
   const dissolve = {
     initial: { 
@@ -111,14 +106,6 @@ const Lucy = () => {
     }
   }
 
-  const onCaptionChange = (isInView, imgIndex) => {
-    // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));
-    if (isInView) {
-      setImageIndex(imgIndex);
-      setImageName(images[imgIndex]);
-    }
-  };
-
   const captionDissolves = captions.map((caption, index) => {
     const presetHTML = `${caption.text}`;
     return (
@@ -126,11 +113,7 @@ const Lucy = () => {
         key={caption.label}
         as="div" 
         dangerouslySetInnerHTML={{ __html: presetHTML }}
-        // onChange={(inView, entry) => { 
-        //   // console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
-        //   onCaptionChange(inView, index); 
-        // }}
-        >
+      >
       </InView>          
     ) 
   })
@@ -142,23 +125,26 @@ const Lucy = () => {
       </div>
       <div className="image-panel"> 
         <div className={`dummy ${isPinned ? "image-panel-outer-div" : "hidden"} `}>
-        {/* <div className='image-panel-outer-div'> */}
 
           <AnimatePresence initial={false}>
-            <motion.div
-              key={imageName}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants = { dissolve }
-              style={{ x: sX , scale: sScale}}
-              //  x: scrollAction    , scale: vScale         
-            >
-              <img 
-                alt={imageName}
-                src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
-              />
-            </motion.div>
+              <motion.div
+                key={imageName}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants = { dissolve }
+                style={{ 
+                  x: isZoomable ? sX : 0, 
+                  scale: isZoomable ? sScale : 1
+                }}
+                //  x: scrollAction    , scale: vScale         
+              >
+                <img 
+                  alt={imageName}
+                  src={`https://dev.digitalgizmo.com/lucy-assets/images/${imageName}`}
+                />
+              </motion.div>            
+
           </AnimatePresence>
 
         </div>
