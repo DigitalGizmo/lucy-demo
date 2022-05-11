@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence, useViewportScroll, useTransform } from 'framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import { images, captions } from './LucyContent';
+import { images, captions, audio } from './LucyContent';
 
 const Lucy = () => {
   const NUM_CAPTIONS = 14;
@@ -9,9 +9,19 @@ const Lucy = () => {
   const [isPinned, setIsPinned] = useState(true);
   const { scrollYProgress } = useViewportScroll(); // scrollY, 
   const [isZoomable, setIsZoomable] = useState(true);
+  const [imageIndex, setImageIndex] = useState(99);
   // const scrollAction = useTransform(
   //   scrollY, [0, 100], [0, 100]
   // );
+  const bgAudio = new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audio[0]}.mp3`);
+  const playAudio = () => {
+    // console.log('got to play audio');
+    bgAudio.play();
+  }
+  const pauseAudio = () => {
+    // console.log('got to pause');
+    bgAudio.pause();
+  }  
   const fudgFactor = .04;
 
   const getThresholds = () => {
@@ -35,7 +45,7 @@ const Lucy = () => {
       ]
     )
   }
-
+  // On my way to memonizing thresholds, but this was enough
   const thresholds = getThresholds();
 
   const sScale = useTransform(
@@ -63,12 +73,18 @@ const Lucy = () => {
   useEffect(() => {
     scrollYProgress.onChange((value) => {
         if (value < thresholds[1]) {
-          setImageName(images[0])
+          // if (imageIndex != 0) {
+            // setImageIndex(0);
+            // pauseAudio()
+            setImageName(images[0])
+          // }
         } else if (value >= thresholds[1] && value < thresholds[2]) {
+          playAudio()
           setImageName(images[1])
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
           setImageName(images[2])
         } else if (value >= thresholds[3] && value < thresholds[5]) {
+          // pauseAudio()
           setIsZoomable(true)
           setImageName(images[3]) // zoom into downstairs
         } else if (value >= thresholds[5] && value < thresholds[6]) {
