@@ -216,57 +216,71 @@ const Lucy = () => {
       { captionDissolves }
     </div>
     <div className="related-material">
-      <h1>Enslaved at the Wells' House</h1>
-      <p>Enslaved people have odds and ends of free time nearly every day, although they must fit them into a fairly rigid schedule of tasks determined by the season. Because it is now autumn, the schedule is especially demanding: harvesting vegetables and grains, preserving fruits, butchering animals and preserving their meat, and gathering and chopping wood for the winter’s fires. Most of these tasks will employ enslaved people and their enslavers working together.
-      </p>
+      <article>
+        <h1>Enslaved at the Wells&apos; House</h1>
+        <p>Enslaved people have odds and ends of free time nearly every day, although they must fit them into a fairly rigid schedule of tasks determined by the season. Because it is now autumn, the schedule is especially demanding: harvesting vegetables and grains, preserving fruits, butchering animals and preserving their meat, and gathering and chopping wood for the winter’s fires. Most of these tasks will employ enslaved people and their enslavers working together.</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+      </article>
 
-      <h2>Who Else?</h2>
-      <ul>
-        <li>Cesar (Caesar)</li>
-        <li>Quash Gomer</li>
-        <li>Elizabeth (Mumbet) Freeman</li>
-        <li>Hannibal</li>
-        Jenny (Jin) Cole, Humphrey, Pompey, Adam, Peter, Titus
-      </ul>
+      <section className="related-lists">
+        <h2>Who Else?</h2>
+        <ul>
+          <li>Cesar (Caesar)</li>
+          <li>Quash Gomer</li>
+          <li>Elizabeth (Mumbet) Freeman</li>
+          <li>Hannibal</li>
+          <li>Jenny (Jin) Cole</li>
+          <li>Humphrey</li>
+          <li>Pompey</li>
+          <li>Titus</li>
+        </ul>
 
-      <h2>How Do We Know?</h2>
-      <ul>
-        <li>Records of the First Church in Deerfield June 15, 1731-1810</li>
-        <li>Account book of Elijah Williams Store, 1745</li>
-        <li>Account books of Dr. Thomas Williams, 1749,1751, 1754, 1756</li>
-        <li>Wethersfield Justice of the Peace Files 174-1900</li>
-        <li>Catharine Maria Sedgewick, "Slavery in New England", 1853</li>
-        <li>James MacSparran, A letter book and Abstract of Out Services Wrtten during the Years 1743-1751</li>
-        <li>Family Bible Owned by David Hoyt, 1762</li>
-        <li>Cast Iron Spider</li>
-        <li>Butter Churn</li>
-      </ul>
+        <h2>How Do We Know?</h2>
+        <ul>
+          <li>Records of the First Church in Deerfield June 15, 1731-1810</li>
+          <li>Deerfield History, by Pliny Arms, 1840</li>
+          <li>Account book of Elijah Williams Store, 1745</li>
+          <li>Account books of Dr. Thomas Williams, 1749,1751, 1754, 1756</li>
+          <li>Wethersfield Justice of the Peace Files 174-1900</li>
+          <li>Catharine Maria Sedgewick, "Slavery in New England", 1853</li>
+          <li>James MacSparran, A letter book and Abstract of Out Services Wrtten during the Years 1743-1751</li>
+          <li>Family Bible Owned by David Hoyt, 1762</li>
+          <li>Lidded Hanging Pot, 1700-1799</li>
+          <li>Bake Kettle</li>
+          <li>Side Chair</li>
+          <li>"SW" Joined Chest</li>
+          <li>Calico Pocket</li>
+          <li>Gate-leg Table</li>
+          <li>Butter Churn</li>
+          <li>Tin-Glazed Earthenware Plate</li>
+        </ul>
 
-      <h2>Topics &amp; Ideas</h2>
-      <ul>
-        <li>Coworkers: Slaveowners in New England generally worked alongside their enslaved workers</li>
-        <li>Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</li>
-        <li>Everyday Resistance: quiet, non-violent forms of resistance</li>
-        <li>Enslaved Person&apos;s Household Work</li>
-        <li>Women&apos;s Work and Men&apos;s Work</li>
-        <li>The Bible and Religion in Domestic Life</li>
-        <li>emotional relations between enslaver and enslaved sharing a house</li>
-        <li>Seasonal Chores: in New England the seasons played a large role in daily work</li>
-        <li>Foodways: enslaved people were often the household cooks, what did they prepare?</li>
-        <li>Free Time: personal time of enslaved people</li>
-        <li>Literacy and Enslavement: enslaved people in New England were often taught to read and less often to write. Why the difference?</li>
-      </ul>
+        <h2>Topics &amp; Ideas</h2>
+        <ul>
+          <li>Coworkers: Slaveowners in New England generally worked alongside their enslaved workers</li>
+          <li>Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</li>
+          <li>Everyday Resistance: quiet, non-violent forms of resistance</li>
+          <li>Enslaved Person&apos;s Household Work</li>
+          <li>Women&apos;s Work and Men&apos;s Work</li>
+          <li>Sleeping Arrangements: in New England, enslaved people and their enslavers shared houses</li>
+          <li>The Bible and Religion in Domestic Life</li>
+          <li>Emotional relations between enslaver and enslaved sharing a house</li>
+          <li>Seasonal Chores: in New England the seasons played a large role in daily work</li>
+          <li>Foodways: enslaved people were often the household cooks, what did they prepare?</li>
+          <li>Free Time: personal time of enslaved people</li>
+          <li>Literacy and Enslavement: enslaved people in New England were often taught to read and less often to write. Why the difference?</li>
+        </ul>
 
-      <h2>Who Knew?</h2>
-      <ul>
-        <li>That enslavement everywhere in the colonies, including in New England, was like enslavement in the American South a generation later.</li>
-      </ul>
+        <h2>Who Knew?</h2>
+        <ul>
+          <li>That enslavement everywhere in the colonies, including in New England, was like enslavement in the American South a generation later.</li>
+        </ul>
 
-      <h2>Where in the World?</h2>
-      <ul>
-        <li>Deerfield houses that included enslaved people</li>
-      </ul>
-
+        <h2>Where in the World?</h2>
+        <ul>
+          <li>Deerfield houses that included enslaved people</li>
+        </ul>
+      </section>
     </div>
 
     </section>
