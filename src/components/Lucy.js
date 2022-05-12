@@ -23,26 +23,28 @@ const Lucy = () => {
   //   // console.log('got to pause');
   //   bgAudio.pause();
   // }  
-  const fudgFactor = .04;
+  const midFudge = 0.04;
+  const lengthFudge = -0.04;
+  const endFudge = 0.02;
 
   const getThresholds = () => {
     return (
       [
         0, // illus_01
-        1/NUM_CAPTIONS, // illus_02 candle lights
-        (1/NUM_CAPTIONS)*2, // illus_03 downstairs bright
-        (1/NUM_CAPTIONS)*3, // illus_04 working position 1
-        (1/NUM_CAPTIONS)*4, // illus_05 working position 2
-        (1/NUM_CAPTIONS)*5, // illus_06 black screen
-        (1/NUM_CAPTIONS)*6 + fudgFactor , // illus_07 friend waits outside
-        (1/NUM_CAPTIONS)*7 + fudgFactor, // illus_08 lucy hands pkg to cesar
-        (1/NUM_CAPTIONS)*8 + fudgFactor, // illus_09 cesar close up
-        (1/NUM_CAPTIONS)*9 + fudgFactor, // illus_10 lucy close up
-        (1/NUM_CAPTIONS)*10 + fudgFactor, // 
-        (1/NUM_CAPTIONS)*11 + fudgFactor, // 
-        (1/NUM_CAPTIONS)*12 + fudgFactor, // 
-        (1/NUM_CAPTIONS)*13 + fudgFactor, // 
-        (1/NUM_CAPTIONS)*14 + fudgFactor, // 
+        (1+lengthFudge)/NUM_CAPTIONS, // illus_02 candle lights
+        ((1+lengthFudge)/NUM_CAPTIONS)*2, // illus_03 downstairs bright
+        ((1+lengthFudge)/NUM_CAPTIONS)*3, // illus_04 working position 1
+        ((1+lengthFudge)/NUM_CAPTIONS)*4, // illus_05 working position 2
+        ((1+lengthFudge)/NUM_CAPTIONS)*5, // illus_06 black screen
+        ((1+lengthFudge)/NUM_CAPTIONS)*6 + midFudge , // illus_07 friend waits outside
+        ((1+lengthFudge)/NUM_CAPTIONS)*7 + midFudge, // illus_08 lucy hands pkg to cesar
+        ((1+lengthFudge)/NUM_CAPTIONS)*8 + midFudge, // illus_09 cesar close up
+        ((1+lengthFudge)/NUM_CAPTIONS)*9 + midFudge, // illus_10 lucy close up
+        ((1+lengthFudge)/NUM_CAPTIONS)*10 + midFudge, // 
+        ((1+lengthFudge)/NUM_CAPTIONS)*11 + midFudge, // 
+        ((1+lengthFudge)/NUM_CAPTIONS)*12 + midFudge, // 
+        ((1+lengthFudge)/NUM_CAPTIONS)*13 + endFudge, // 
+        ((1+lengthFudge)/NUM_CAPTIONS)*14, // 
       ]
     )
   }
