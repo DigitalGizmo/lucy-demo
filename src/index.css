@@ -105,10 +105,25 @@ a.caption-link {
   grid-column: 2;
 }
 
-.related-material ul {
+.related-material h1 {
+  font-size: 1.75em;
+  margin-top: 0.25em;
+}
+
+.related-material h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
+}
+
+.related-lists {
+  background-color: aliceblue;
+  padding: 1em;
+}
+.related-lists ul {
+  font-size: .8em;
   list-style-type: none;
   margin-top:  0.25em;
-  padding-left: 15px;
+  padding-left: 0px;
 }
 
 .hidden {
