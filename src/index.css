@@ -89,9 +89,41 @@ a.caption-link {
 
 .related-material {
   background-color: white;
-  margin-top: -360px;
+  display: grid;
+  grid-template-columns: 2;
+  grid-gap: 2em;
+  margin-top: -330px;
   padding: 1.5em;
   z-index: 90;
+}
+
+.related-material article {
+  grid-column:  1;
+}
+
+.related-lists {
+  grid-column: 2;
+}
+
+.related-material h1 {
+  font-size: 1.75em;
+  margin-top: 0.25em;
+}
+
+.related-material h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.25em;
+}
+
+.related-lists {
+  background-color: aliceblue;
+  padding: 1em;
+}
+.related-lists ul {
+  font-size: .8em;
+  list-style-type: none;
+  margin-top:  0.25em;
+  padding-left: 0px;
 }
 
 .hidden {
@@ -142,3 +174,18 @@ a.caption-link {
   padding: 1em 3em 1em 1em;
   margin: 0;
 }
+
+.sidebar-parent article h4 {
+  margin-bottom:  0;
+}
+
+.sidebar-parent article ul {
+  list-style-type: none;
+  margin-top:  0.25em;
+  padding-left: 15px;
+}
+
+.sidebar-parent article a {
+  color:  dodgerblue;
+}
+
