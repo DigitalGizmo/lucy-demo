@@ -69,7 +69,7 @@ const captions = [
     text: '<p>Cesar and Lucy are eager to hear news from other households and share their own updates.</p>'
   },
   {
-    label: '12 13th image - close up of lucys face',
+    label: '12 13th caption - close up of lucys face',
     text: '<p>Lucy is anxious, apprehensive, and excited. She worries that Wells&apos; will discover that Caesar has been out.</p>'
   },
 ];

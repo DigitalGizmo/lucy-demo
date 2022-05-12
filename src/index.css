@@ -92,7 +92,7 @@ a.caption-link {
   display: grid;
   grid-template-columns: 2;
   grid-gap: 2em;
-  margin-top: -360px;
+  margin-top: -330px;
   padding: 1.5em;
   z-index: 90;
 }

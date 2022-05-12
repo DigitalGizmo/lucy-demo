@@ -25,12 +25,11 @@ const Lucy = () => {
   // }  
   // const fudgFactor = .04;
   const lengthFudge = -0.08;
-  const endFudge = -0.01;
 
   const getThresholds = () => {
     return (
       [
-        0, // illus_01
+        0, // illus_0
         (1+lengthFudge)/NUM_CAPTIONS, // illus_02 candle lights
         ((1+lengthFudge)/NUM_CAPTIONS)*2, // illus_03 downstairs bright
         ((1+lengthFudge)/NUM_CAPTIONS)*3, // illus_04 working position 1
@@ -42,9 +41,10 @@ const Lucy = () => {
         ((1+lengthFudge)/NUM_CAPTIONS)*9 , // illus_10 lucy close up
         ((1+lengthFudge)/NUM_CAPTIONS)*10, // 
         ((1+lengthFudge)/NUM_CAPTIONS)*11, // 
-        ((1+lengthFudge)/NUM_CAPTIONS)*12, // 
-        ((1+lengthFudge)/NUM_CAPTIONS)*13 + endFudge, // unpin to show related section
-        ((1+lengthFudge)/NUM_CAPTIONS)*14, // 
+        ((1+lengthFudge)/NUM_CAPTIONS)*12, // Start luch close-up
+        ((1+lengthFudge)/NUM_CAPTIONS)*13 - 0.01, // start black screen
+        ((1+lengthFudge)/NUM_CAPTIONS)*13 - 0.005, // index 14 unpin to show related sectio
+        // ((1+lengthFudge)/NUM_CAPTIONS)*13 + 0.02, // index 15
       ]
     )
   }
@@ -127,11 +127,15 @@ const Lucy = () => {
           setMoreIndex(11);
           setImageName(images[10])
         } else if (value >= thresholds[12] && value < thresholds[13]) {
+          // setMoreIndex(11); /
+          // console.log('value between 12 and 13: img 11 lucy' + value)
+          setImageName(images[11]) // Lucy close up
+        } else if (value >= thresholds[13] && value < thresholds[14]) {
           setIsPinned(true)
-          setMoreIndex(12);
-          setImageName(images[11]) // stepping out, last image
-          // console.log('value between 12 and 13: ' + value)
-        } else if (value >= thresholds[13] ) { // && value < thresholds[14]
+          // setMoreIndex(12);
+          setImageName(images[12]) // black screen
+          // console.log('value between 13 and 14: black screen ' + value)
+        } else if (value >= thresholds[14] ) { // && value < thresholds[14]
           setIsPinned(false)
         }
     })
