@@ -1,11 +1,11 @@
 const images = [
-  '01-dark-house.jpg',// index 0
+  '01-dark-house.gif',// index 0
   '02-dawn-house.jpg', // Index 1 (2nd picture)
   '03-candle.jpg',    // Index 2
   '04-house-cutaway.jpg',
-  '05-lucy-hearth.jpg', // Index  4
-  '06-cesar-hens.gif',
-  '07-interlude.jpg',// Index 6
+  '05-lucy-hearth.gif', // Index  4
+  '06-cesar-hens2.gif',
+  'black-screen.jpg',// Index 6
   '08-night-fallen-anim.gif', // Night has fallen, moon rises
   '10-door-open.jpg',// 8 friend in yard
   '11-package.jpg', // Index 
@@ -22,7 +22,7 @@ const audio = [
 const captions = [
   {
     label: '0 1st image - house exterior, stars visible',
-    text: '<p>Enslaved at the Wells&rsquo; house.</p><p>Scroll down to begin</p>',
+    text: '<h1>Enslaved at the Wells&rsquo; house.</h1><p>Scroll down to begin</p>',
   },
   {
     label: '1 2nd image, house exterior, sky lightens',

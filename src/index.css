@@ -87,9 +87,10 @@ a.caption-link {
   text-decoration: underline;
 }
 
-.don-last-page {
-  margin-top: -360px;
+.related-material {
   background-color: white;
+  margin-top: -360px;
+  padding: 1.5em;
   z-index: 90;
 }
 
