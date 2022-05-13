@@ -15,7 +15,7 @@ const images = [
 ]; // index 12 (13th picture)
 // '09-moon-risen.jpg', // Index 8
 
-const audio = [
+const audios = [
   'dawn-birds',
 ];
 
@@ -129,6 +129,6 @@ const mores = [
   },
 ];
 export {images}
-export {audio}
+export {audios}
 export {captions}
 export {mores}

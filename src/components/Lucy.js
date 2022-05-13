@@ -1,7 +1,32 @@
 import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence, useViewportScroll, useTransform } from 'framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import { images, captions, audio, mores } from './LucyContent';
+import { images, captions, audios, mores } from './LucyContent';
+
+// From: https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
+const useAudio = url => {
+  const [audio] = useState(new Audio(url));
+  const [playing, setPlaying] = useState(false);
+
+  // const toggle = () => setPlaying(!playing);
+  const playAudio = () => setPlaying(true);
+  const pauseAudio = () => setPlaying(false);
+
+  useEffect(() => {
+      playing ? audio.play() : audio.pause();
+    },
+    [playing, audio]
+  );
+
+  useEffect(() => {
+    audio.addEventListener('ended', () => setPlaying(false));
+    return () => {
+      audio.removeEventListener('ended', () => setPlaying(false));
+    };
+  }, [audio]);
+
+  return [playing, playAudio, pauseAudio];
+};
 
 const Lucy = () => {
   const NUM_CAPTIONS = 13;
@@ -10,20 +35,9 @@ const Lucy = () => {
   const { scrollYProgress } = useViewportScroll(); // scrollY, 
   const [isZoomable, setIsZoomable] = useState(true);
   const [moreIndex, setMoreIndex] = useState(0);
-  // const [moreIndex, setMoreIndexTracker] = useState(0);
-  // const scrollAction = useTransform(
-  //   scrollY, [0, 100], [0, 100]
-  // );
-  const bgAudio = new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audio[0]}.mp3`);
-  const playAudio = () => {
-    // console.log('got to play audio');
-    bgAudio.play();
-  }
-  // const pauseAudio = () => {
-  //   // console.log('got to pause');
-  //   bgAudio.pause();
-  // }  
 
+  // const bgAudio = new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audio[0]}.mp3`);
+  
   const lengthFudge = -0.08;
 
 
@@ -74,10 +88,8 @@ const Lucy = () => {
     [0, 360, 360, 0, 0]
   )  
 
-  // useEffect(() => {
-  //   setMoreIndexTracker(imageIndex);
-  // },[imageIndex])
-
+  const [playing, playAudio, pauseAudio] = useAudio("https://dev.digitalgizmo.com/lucy-assets/audio/dawn-birds.mp3");
+  
   useEffect(() => {
     scrollYProgress.onChange((value) => {
         if (value < thresholds[1]) {
@@ -85,7 +97,7 @@ const Lucy = () => {
           if (moreIndex !== 0) {
             setMoreIndex(0);
             // console.log('imageIndex after set: ' + imageIndex);
-            // pauseAudio()
+            pauseAudio()
             setImageName(images[0])
           }
         } else if (value >= thresholds[1] && value < thresholds[2]) {
@@ -94,11 +106,14 @@ const Lucy = () => {
             setMoreIndex(1);
             // console.log('imageIndex-1 after set: ' + imageIndex);
             // pauseAudio()
-            playAudio()
+
+            playAudio();
+
             setImageName(images[1])
           }
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
           setMoreIndex(2);
+          pauseAudio();
           setImageName(images[2])
         } else if (value >= thresholds[3] && value < thresholds[5]) {
           // pauseAudio()
@@ -176,6 +191,8 @@ const Lucy = () => {
     <section className='main-section'>    
       <div className="chapter-title">
         <h1>Lucy Terry Prince - Enslaved at the Wells&rsquo; House</h1>
+        <button onClick={playAudio}>play</button>
+        <button onClick={pauseAudio}>pause</button>
       </div>
       <div className="image-panel"> 
 
