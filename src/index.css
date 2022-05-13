@@ -82,18 +82,13 @@ img {
   font-weight: bold;
 }
 
-a.caption-link {
-  color: #B25900;
-  text-decoration: underline;
-}
-
 .related-material {
   background-color: white;
   display: grid;
   grid-template-columns: 2;
   grid-gap: 2em;
   margin-top: -330px;
-  padding: 1.5em;
+  padding: 1.5em 2em;
   z-index: 90;
 }
 
@@ -119,6 +114,7 @@ a.caption-link {
   background-color: aliceblue;
   padding: 1em;
 }
+
 .related-lists ul {
   font-size: .8em;
   list-style-type: none;
@@ -148,8 +144,9 @@ a.caption-link {
   /* opacity: 1; */
   left: 0px;
 }
+
 .sidebar {
-  background-color: dodgerblue;
+  background-color: #146cc1;
   border-radius: 0 0 3px 3px;
   padding: 1.25em 1em 0.25em 1em;
   position: absolute;
@@ -169,6 +166,10 @@ a.caption-link {
 
 .sidebar-parent article {
   background-color: #fff;
+  border-radius: 0 3px 3px 0;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
   color: #333;
   font-size: .75em;
   padding: 1em 3em 1em 1em;
@@ -185,7 +186,7 @@ a.caption-link {
   padding-left: 15px;
 }
 
-.sidebar-parent article a {
-  color:  dodgerblue;
+.sidebar-parent article a, .related-lists a {
+  color: #146cc1;
 }
 
