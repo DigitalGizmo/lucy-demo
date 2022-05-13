@@ -232,50 +232,50 @@ const Lucy = () => {
       <section className="related-lists">
         <h2>Who Else?</h2>
         <ul>
-          <li><a href="">Cesar (Caesar)</a></li>
-          <li><a href="">Quash Gomer</a></li>
-          <li><a href="">Elizabeth (Mumbet) Freeman</a></li>
-          <li><a href="">Hannibal</a></li>
-          <li><a href="">Jenny (Jin) Cole</a></li>
-          <li><a href="">Humphrey</a></li>
-          <li><a href="">Pompey</a></li>
-          <li><a href="">Titus</a></li>
+          <li><a href="/">Cesar (Caesar)</a></li>
+          <li><a href="/">Quash Gomer</a></li>
+          <li><a href="/">Elizabeth (Mumbet) Freeman</a></li>
+          <li><a href="/">Hannibal</a></li>
+          <li><a href="/">Jenny (Jin) Cole</a></li>
+          <li><a href="/">Humphrey</a></li>
+          <li><a href="/">Pompey</a></li>
+          <li><a href="/">Titus</a></li>
         </ul>
 
         <h2>How Do We Know?</h2>
         <ul>
-          <li><a href="">Records of the First Church in Deerfield June 15, 1731-1810</a></li>
-          <li><a href="">Deerfield History, by Pliny Arms, 1840</a></li>
-          <li><a href="">Account book of Elijah Williams Store, 1745</a></li>
-          <li><a href="">Account books of Dr. Thomas Williams, 1749,1751, 1754, 1756</a></li>
-          <li><a href="">Wethersfield Justice of the Peace Files 174-1900</a></li>
-          <li><a href="">Catharine Maria Sedgewick, "Slavery in New England", 1853</a></li>
-          <li><a href="">James MacSparran, A letter book and Abstract of Out Services Wrtten during the Years 1743-1751</a></li>
-          <li><a href="">Family Bible Owned by David Hoyt, 1762</a></li>
-          <li><a href="">Lidded Hanging Pot, 1700-1799</a></li>
-          <li><a href="">Bake Kettle</a></li>
-          <li><a href="">Side Chair</a></li>
-          <li><a href="">&ldquo;SW&rdquo; Joined Chest</a></li>
-          <li><a href="">Calico Pocket</a></li>
-          <li><a href="">Gate-leg Table</a></li>
-          <li><a href="">Butter Churn</a></li>
-          <li><a href="">Tin-Glazed Earthenware Plate</a></li>
+          <li><a href="/">Records of the First Church in Deerfield June 15, 1731-1810</a></li>
+          <li><a href="/">Deerfield History, by Pliny Arms, 1840</a></li>
+          <li><a href="/">Account book of Elijah Williams Store, 1745</a></li>
+          <li><a href="/">Account books of Dr. Thomas Williams, 1749,1751, 1754, 1756</a></li>
+          <li><a href="/">Wethersfield Justice of the Peace Files 174-1900</a></li>
+          <li><a href="/">Catharine Maria Sedgewick, "Slavery in New England", 1853</a></li>
+          <li><a href="/">James MacSparran, A letter book and Abstract of Out Services Wrtten during the Years 1743-1751</a></li>
+          <li><a href="/">Family Bible Owned by David Hoyt, 1762</a></li>
+          <li><a href="/">Lidded Hanging Pot, 1700-1799</a></li>
+          <li><a href="/">Bake Kettle</a></li>
+          <li><a href="/">Side Chair</a></li>
+          <li><a href="/">&ldquo;SW&rdquo; Joined Chest</a></li>
+          <li><a href="/">Calico Pocket</a></li>
+          <li><a href="/">Gate-leg Table</a></li>
+          <li><a href="/">Butter Churn</a></li>
+          <li><a href="/">Tin-Glazed Earthenware Plate</a></li>
         </ul>
 
         <h2>Topics &amp; Ideas</h2>
         <ul>
-          <li><a href="">Coworkers: Slaveowners in New England generally worked alongside their enslaved workers</a></li>
-          <li><a href="">Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</a></li>
-          <li><a href="">Everyday Resistance: quiet, non-violent forms of resistance</a></li>
-          <li><a href="">Enslaved Person&apos;s Household Work</a></li>
-          <li><a href="">Women&apos;s Work and Men&apos;s Work</a></li>
-          <li><a href="">Sleeping Arrangements: in New England, enslaved people and their enslavers shared houses</a></li>
-          <li><a href="">The Bible and Religion in Domestic Life</a></li>
-          <li><a href="">Emotional relations between enslaver and enslaved sharing a house</a></li>
-          <li><a href="">Seasonal Chores: in New England the seasons played a large role in daily work</a></li>
-          <li><a href="">Foodways: enslaved people were often the household cooks, what did they prepare?</a></li>
-          <li><a href="">Free Time: personal time of enslaved people</a></li>
-          <li><a href="">Literacy and Enslavement: enslaved people in New England were often taught to read and less often to write. Why the difference?</a></li>
+          <li><a href="/">Coworkers: Slaveowners in New England generally worked alongside their enslaved workers</a></li>
+          <li><a href="/">Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</a></li>
+          <li><a href="/">Everyday Resistance: quiet, non-violent forms of resistance</a></li>
+          <li><a href="/">Enslaved Person&apos;s Household Work</a></li>
+          <li><a href="/">Women&apos;s Work and Men&apos;s Work</a></li>
+          <li><a href="/">Sleeping Arrangements: in New England, enslaved people and their enslavers shared houses</a></li>
+          <li><a href="/">The Bible and Religion in Domestic Life</a></li>
+          <li><a href="/">Emotional relations between enslaver and enslaved sharing a house</a></li>
+          <li><a href="/">Seasonal Chores: in New England the seasons played a large role in daily work</a></li>
+          <li><a href="/">Foodways: enslaved people were often the household cooks, what did they prepare?</a></li>
+          <li><a href="/">Free Time: personal time of enslaved people</a></li>
+          <li><a href="/">Literacy and Enslavement: enslaved people in New England were often taught to read and less often to write. Why the difference?</a></li>
         </ul>
 
         <h2>Who Knew?</h2>
@@ -285,7 +285,7 @@ const Lucy = () => {
 
         <h2>Where in the World?</h2>
         <ul>
-          <li><a href="">Deerfield houses that included enslaved people</a></li>
+          <li><a href="/">Deerfield houses that included enslaved people</a></li>
         </ul>
       </section>
     </div>
