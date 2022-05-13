@@ -4,8 +4,8 @@ import { InView } from "react-intersection-observer"; // useInView,
 import { images, captions, audios, mores } from './LucyContent';
 
 // From: https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
-const useAudio = url => {
-  const [audio] = useState(new Audio(url));
+const useAudio = (audioName) => {
+  const [audio] = useState(new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audioName}.mp3`));
   const [playing, setPlaying] = useState(false);
 
   // const toggle = () => setPlaying(!playing);
@@ -88,7 +88,7 @@ const Lucy = () => {
     [0, 360, 360, 0, 0]
   )  
 
-  const [playing, playAudio, pauseAudio] = useAudio("https://dev.digitalgizmo.com/lucy-assets/audio/dawn-birds.mp3");
+ let [playing, playAudio, pauseAudio] = useAudio(audios[0]);
   
   useEffect(() => {
     scrollYProgress.onChange((value) => {
