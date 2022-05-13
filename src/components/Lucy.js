@@ -3,31 +3,6 @@ import {motion, AnimatePresence, useViewportScroll, useTransform } from 'framer-
 import { InView } from "react-intersection-observer"; // useInView, 
 import { images, captions, audios, mores } from './LucyContent';
 
-// From: https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
-const useAudio = (audioName) => {
-  const [audio] = useState(new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audioName}.mp3`));
-  const [playing, setPlaying] = useState(false);
-
-  // const toggle = () => setPlaying(!playing);
-  const playAudio = () => setPlaying(true);
-  const pauseAudio = () => setPlaying(false);
-
-  useEffect(() => {
-      playing ? audio.play() : audio.pause();
-    },
-    [playing, audio]
-  );
-
-  useEffect(() => {
-    audio.addEventListener('ended', () => setPlaying(false));
-    return () => {
-      audio.removeEventListener('ended', () => setPlaying(false));
-    };
-  }, [audio]);
-
-  return [playing, playAudio, pauseAudio];
-};
-
 const Lucy = () => {
   const NUM_CAPTIONS = 13;
   const [imageName, setImageName] = useState(images[0]);
@@ -35,6 +10,45 @@ const Lucy = () => {
   const { scrollYProgress } = useViewportScroll(); // scrollY, 
   const [isZoomable, setIsZoomable] = useState(true);
   const [moreIndex, setMoreIndex] = useState(0);
+  const [audioName, setAudioName] = useState('crickets');
+
+
+  // From: https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
+  // More on that page re: playing multiple tracks.
+  const useAudio = () => {
+    const [audio, setAudio] = useState(new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audioName}.mp3`));
+    const [playing, setPlaying] = useState(false);
+
+    // const toggle = () => setPlaying(!playing);
+    const playAudio = () => setPlaying(true);
+    const pauseAudio = () => setPlaying(false);
+
+    useEffect(() => {
+        playing ? audio.play() : audio.pause();
+      },
+      [playing, audio]
+    );
+
+    useEffect(() => {
+        // setPlaying(false);
+        setAudio(new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audioName}.mp3`));
+
+      },
+      [audioName]
+    );
+
+    useEffect(() => {
+      audio.addEventListener('ended', () => setPlaying(false));
+      return () => {
+        audio.removeEventListener('ended', () => setPlaying(false));
+      };
+    }, [audio]);
+
+    return [playing, playAudio, pauseAudio];
+  };
+
+
+
 
   // const bgAudio = new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audio[0]}.mp3`);
   
@@ -88,27 +102,28 @@ const Lucy = () => {
     [0, 360, 360, 0, 0]
   )  
 
- let [playing, playAudio, pauseAudio] = useAudio(audios[0]);
+ const [playing, playAudio, pauseAudio] = useAudio();
   
   useEffect(() => {
     scrollYProgress.onChange((value) => {
         if (value < thresholds[1]) {
           // console.log('imageIndex before if: ' + imageIndex);
           if (moreIndex !== 0) {
-            setMoreIndex(0);
             // console.log('imageIndex after set: ' + imageIndex);
-            pauseAudio()
+            setMoreIndex(0);
+            // pauseAudio()
+            setAudioName(audios[0]);
+            playAudio();
             setImageName(images[0])
           }
         } else if (value >= thresholds[1] && value < thresholds[2]) {
           // console.log('imageIndex-1 before if: ' + imageIndex);
           if (moreIndex !== 1) {
-            setMoreIndex(1);
             // console.log('imageIndex-1 after set: ' + imageIndex);
+            setMoreIndex(1);
             // pauseAudio()
-
+            setAudioName(audios[1]);
             playAudio();
-
             setImageName(images[1])
           }
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold

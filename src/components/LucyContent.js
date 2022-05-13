@@ -16,6 +16,7 @@ const images = [
 // '09-moon-risen.jpg', // Index 8
 
 const audios = [
+  'crickets',
   'dawn-birds',
 ];
 
