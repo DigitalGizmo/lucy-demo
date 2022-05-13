@@ -9,8 +9,8 @@ const images = [
   '08-night-fallen-anim.gif', // Night has fallen, moon rises
   '10-door-open.jpg',// 8 friend in yard
   '11-package.jpg', // Index 
-  '13-stepping-out.jpg', // 10 
   '12-lucy-closeup.jpg', // 11
+  '13-stepping-out.jpg', // 10 
   'black-screen.jpg', // 12
 ]; // index 12 (13th picture)
 // '09-moon-risen.jpg', // Index 8
@@ -66,12 +66,12 @@ const captions = [
     text: '<p>She is a friend of Lucy&apos;s, too, and Lucy gives Caesar a package for her, asking him to relay a message proposing that the two young women meet sometime the following day.</p>'
   },
   {
-    label: '11 12th image - cesar and friend leaving',
-    text: '<p>Cesar and Lucy are eager to hear news from other households and share their own updates.</p>'
-  },
-  {
     label: '12 13th caption - close up of lucys face',
     text: '<p>Lucy is anxious, apprehensive, and excited. She worries that Wells&apos; will discover that Caesar has been out.</p>'
+  },
+  {
+    label: '11 12th image - cesar and friend leaving',
+    text: '<p>Cesar and Lucy are eager to hear news from other households and share their own updates.</p>'
   },
 ];
 
@@ -98,11 +98,11 @@ const mores = [
   },
   {
     label: '5 6th image - lucy at the hearth',
-    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Jenny (Jin) Cole</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Coworkers</a></li><li><a href="">Foodways</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Lidded Hanging Pot</a></li><li><a href="">Iron Bake Kettle</a></li><li><a href="">Calico Pocket</a></li><li><a href="">Video: Churning Butter</a></li></ul>',
+    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Jenny (Jin) Cole</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Coworkers</a></li><li><a href="">Foodways</a></li><li><a href="">Women&apos;s Work and Men&apos;s Work</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Lidded Hanging Pot</a></li><li><a href="">Iron Bake Kettle</a></li><li><a href="">Calico Pocket</a></li><li><a href="">Video: Churning Butter</a></li></ul>',
   },
   {
     label: '6 7th image - cesar feeds chickens',
-    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Humphrey</a></li><li><a href="">Pompey</a></li><li><a href="">Hannibal</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Seasonal Chores</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li></ul>',
+    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Humphrey</a></li><li><a href="">Pompey</a></li><li><a href="">Hannibal</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Seasonal Chores</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li><li><a href="">Women&apos;s Work and Men&apos;s Work</a></li></ul>',
   },
   {
     label: '7 8th image - Interlude',
@@ -114,19 +114,19 @@ const mores = [
   },
   {
     label: '9 10th image - friend in yard',
-    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Titus</a></li><li><a href="">Hannibal</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Everyday Resistance</a></li><li><a href="">Free Time</a></li></ul>',
+    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Titus</a></li><li><a href="">Quash Gomer</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Everyday Resistance</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="/">Rhode Island law about black people out after curfew, 1703</a></li></ul><h4>Who Knew?</h4><ul><li><a href="">Enslaved People Had No Free Time</a></li></ul>',
   },
   {
     label: '10 11th image - lucy hands cesar package',
     text: '<h2>Not Sure What to Show Here</h2>'
   },
   {
-    label: '11 12th image - cesar and friend leaving',
-    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Titus</a></li><li><a href="">Hannibal</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Everyday Resistance</a></li><li><a href="">Free Time</a></li></ul>',
-  },
-  {
     label: '12 13th image - close up of lucy ',
     text: '<h2>Not Sure What to Show Here</h2>'
+  },
+  {
+    label: '11 12th image - cesar and friend leaving',
+    text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Titus</a></li><li><a href="">Quash Gomer</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Everyday Resistance</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="/">Rhode Island law about black people out after curfew, 1703</a></li></ul><h4>Who Knew?</h4><ul><li><a href="">Enslaved People Had No Free Time</a></li></ul>',
   },
 ];
 export {images}
