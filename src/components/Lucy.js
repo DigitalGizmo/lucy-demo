@@ -19,7 +19,7 @@ const Lucy = () => {
     const [audio, setAudio] = useState(new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audioName}.mp3`));
     const [playing, setPlaying] = useState(false);
 
-    // const toggle = () => setPlaying(!playing);
+    const toggle = () => setPlaying(!playing);
     const playAudio = () => setPlaying(true);
     const pauseAudio = () => setPlaying(false);
 
@@ -44,17 +44,10 @@ const Lucy = () => {
       };
     }, [audio]);
 
-    return [playing, playAudio, pauseAudio];
+    return [playing, playAudio, pauseAudio, toggle];
   };
-
-
-
-
-  // const bgAudio = new Audio(`https://dev.digitalgizmo.com/lucy-assets/audio/${audio[0]}.mp3`);
   
   const lengthFudge = -0.08;
-
-
   const getThresholds = () => {
     return (
       [
@@ -102,7 +95,7 @@ const Lucy = () => {
     [0, 360, 360, 0, 0]
   )  
 
- const [playing, playAudio, pauseAudio] = useAudio();
+ const [playing, playAudio, pauseAudio, toggle] = useAudio();
   
   useEffect(() => {
     scrollYProgress.onChange((value) => {
@@ -128,7 +121,7 @@ const Lucy = () => {
           }
         } else if (value >= thresholds[2] && value < thresholds[3]) { // hold
           setMoreIndex(2);
-          pauseAudio();
+          // pauseAudio();
           setImageName(images[2])
         } else if (value >= thresholds[3] && value < thresholds[5]) {
           // pauseAudio()
@@ -206,8 +199,6 @@ const Lucy = () => {
     <section className='main-section'>    
       <div className="chapter-title">
         <h1>Lucy Terry Prince - Enslaved at the Wells&rsquo; House</h1>
-        <button onClick={playAudio}>play</button>
-        <button onClick={pauseAudio}>pause</button>
       </div>
       <div className="image-panel"> 
 
@@ -251,7 +242,7 @@ const Lucy = () => {
     </div>{/*  /image-panel */}
 
     <div className="caption-panel">
-      {/* custom first caption */}
+      <button className="audio-don-button" onClick={toggle}>{playing ? "Pause audio" : "Listen to audio"}</button>
       { captionDissolves }
     </div>
     <div className="related-material">
