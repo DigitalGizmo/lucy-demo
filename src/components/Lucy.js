@@ -126,12 +126,12 @@ const Lucy = () => {
         } else if (value >= thresholds[3] && value < thresholds[5]) {
           // pauseAudio()
           setIsZoomable(true)
-          setMoreIndex(3);
+          setMoreIndex(3); // More id 3 holds for thresh 3 & 4
           setImageName(images[3]) // zoom into downstairs
         } else if (value >= thresholds[5] && value < thresholds[6]) {
           setIsZoomable(false)
           setMoreIndex(5);
-          setImageName(images[4]) // Lucy at hearth
+          setImageName(images[4]) // Image index is one behind now bcz zoom
         } else if (value >= thresholds[6] && value < thresholds[7]) {
           setMoreIndex(6);
           setImageName(images[5])
@@ -151,7 +151,7 @@ const Lucy = () => {
           setMoreIndex(11);
           setImageName(images[10])
         } else if (value >= thresholds[12] && value < thresholds[13]) {
-          // setMoreIndex(11); /
+          setMoreIndex(12); 
           // console.log('value between 12 and 13: img 11 lucy' + value)
           setImageName(images[11]) // Lucy close up
         } else if (value >= thresholds[13] && value < thresholds[14]) {

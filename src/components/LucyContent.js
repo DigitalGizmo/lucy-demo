@@ -66,11 +66,11 @@ const captions = [
     text: '<p>She is a friend of Lucy&apos;s, too, and Lucy gives Caesar a package for her, asking him to relay a message proposing that the two young women meet sometime the following day.</p>'
   },
   {
-    label: '12 13th caption - close up of lucys face',
+    label: '11 12th caption - close up of lucys face',
     text: '<p>Lucy is anxious, apprehensive, and excited. She worries that Wells&apos; will discover that Caesar has been out.</p>'
   },
   {
-    label: '11 12th image - cesar and friend leaving',
+    label: '12 13th image - cesar and friend leaving',
     text: '<p>Cesar and Lucy are eager to hear news from other households and share their own updates.</p>'
   },
 ];
@@ -121,11 +121,11 @@ const mores = [
     text: '<h2>Not Sure What to Show Here</h2>'
   },
   {
-    label: '12 13th image - close up of lucy ',
+    label: '11 12th image - close up of lucy ',
     text: '<h2>Not Sure What to Show Here</h2>'
   },
   {
-    label: '11 12th image - cesar and friend leaving',
+    label: '12 13th image - cesar and friend leaving',
     text: '<h2>More</h2><h4>Who Else?</h4><ul><li><a href="">Titus</a></li><li><a href="">Quash Gomer</a></li></ul><h4>Topics &amp; Ideas</h4><ul><li><a href="">Everyday Resistance</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="/">Rhode Island law about black people out after curfew, 1703</a></li></ul><h4>Who Knew?</h4><ul><li><a href="">Enslaved People Had No Free Time</a></li></ul>',
   },
 ];
