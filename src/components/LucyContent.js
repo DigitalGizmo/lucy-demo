@@ -90,11 +90,11 @@ const mores = [
   },
   {
     label: '3 4th image - cutaway of house',
-    text: '<h2>More</h2><h4>Topics &amp; Ideas</h4><ul><li><a href="">Sleeping Arrangements</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Canopied Bed</a></li><li><a href="">Candlestick</a></li><li><a href="">Dress Up Activity</a></li></ul>',
+    text: '<h2>More</h2><h4>Topics &amp; Ideas</h4><ul><li><a href="">Sleeping Arrangements</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Canopied Bed</a></li><li><a href="">Candlestick</a></li><li><a href="">1750s Women&apos;s Clothing: A Dress Up Activity</a></li></ul>',
   },
   {
     label: '4 5th image - zoom into cutaway of house',
-    text: '<h2>More</h2><h4>Topics &amp; Ideas</h4><ul><li><a href="">Sleeping Arrangements</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Canopied Bed</a></li><li><a href="">Candlestick</a></li><li><a href="">Dress Up Activity</a></li></ul>',
+    text: '<h2>More</h2><h4>Topics &amp; Ideas</h4><ul><li><a href="">Sleeping Arrangements</a></li><li><a href="">Enslaved Person&apos;s Household Work</a></li></ul><h4>How Do We Know?</h4><ul><li><a href="">Canopied Bed</a></li><li><a href="">Candlestick</a></li><li><a href="">1750s Women&apos;s Clothing: A Dress Up Activity</a></li></ul>',
   },
   {
     label: '5 6th image - lucy at the hearth',
