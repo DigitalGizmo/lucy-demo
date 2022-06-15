@@ -20,8 +20,6 @@ const audios = [
   'dawn-birds',
 ];
 
-// const openingCaption = '<h1>Enslaved at the Wells&rsquo; house.</h1><p>Scroll down to begin</p>';
-
 const captions = [
   // {
   //   label: '0 1st image - house exterior, sky dark stars visible, smoke animation',
@@ -133,6 +131,5 @@ const mores = [
 ];
 export {images}
 export {audios}
-// export {openingCaption}
 export {captions}
 export {mores}

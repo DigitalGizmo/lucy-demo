@@ -48,25 +48,26 @@ const Lucy = () => {
   }; // end useAudio
   
   const lengthFudge = -0.08;
+  const lucysConstant = (1+lengthFudge)/NUM_CAPTIONS;
+  const julietsConstant = 0.01; // makes picture appear sooner relative to caption
   const getThresholds = () => {
     return (
       [
         0, // illus_0
-        (1+lengthFudge)/NUM_CAPTIONS, // illus_02 candle lights
-        ((1+lengthFudge)/NUM_CAPTIONS)*2, // illus_03 downstairs bright
-        ((1+lengthFudge)/NUM_CAPTIONS)*3, // illus_04 working position 1
-        ((1+lengthFudge)/NUM_CAPTIONS)*4, // illus_05 working position 2
-        ((1+lengthFudge)/NUM_CAPTIONS)*5, // illus_06 black screen
-        ((1+lengthFudge)/NUM_CAPTIONS)*6 , // illus_07 friend waits outside
-        ((1+lengthFudge)/NUM_CAPTIONS)*7 , // illus_08 lucy hands pkg to cesar
-        ((1+lengthFudge)/NUM_CAPTIONS)*8 , // illus_09 cesar close up
-        ((1+lengthFudge)/NUM_CAPTIONS)*9 , // illus_10 lucy close up
-        ((1+lengthFudge)/NUM_CAPTIONS)*10, // 
-        ((1+lengthFudge)/NUM_CAPTIONS)*11, // 
-        ((1+lengthFudge)/NUM_CAPTIONS)*12, // Start luch close-up
-        ((1+lengthFudge)/NUM_CAPTIONS)*13 - 0.01, // start black screen
-        ((1+lengthFudge)/NUM_CAPTIONS)*13 - 0.005, // index 14 unpin to show related sectio
-        // ((1+lengthFudge)/NUM_CAPTIONS)*13 + 0.02, // index 15
+        lucysConstant   - julietsConstant, // illus_02 candle lights
+        lucysConstant*2 - julietsConstant, // illus_03 downstairs bright
+        lucysConstant*3 - julietsConstant, // illus_04 working position 1
+        lucysConstant*4 - julietsConstant, // illus_05 working position 2
+        lucysConstant*5 - julietsConstant, // illus_06 black screen
+        lucysConstant*6 - julietsConstant, // illus_07 friend waits outside
+        lucysConstant*7 - julietsConstant, // illus_08 lucy hands pkg to cesar
+        lucysConstant*8 - julietsConstant, // illus_09 cesar close up
+        lucysConstant*9 - julietsConstant, // illus_10 lucy close up
+        lucysConstant*10- julietsConstant, // 
+        lucysConstant*11- julietsConstant, // 
+        lucysConstant*12- julietsConstant, // Start luch close-up
+        lucysConstant*13- julietsConstant - 0.01, // start black screen
+        lucysConstant*13- julietsConstant - 0.005, // index 14 unpin to show related sectio        // lucysConstant*13 + 0.02, // index 15
       ]
     )
   };
