@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence, useViewportScroll, useTransform } from 'framer-motion'; // , useAnimation
-import { InView } from "react-intersection-observer"; // useInView, 
+// import { InView } from "react-intersection-observer"; // useInView, 
 import { images, captions, audios, mores } from './LucyContent';
 
 const Lucy = () => {
@@ -45,7 +45,7 @@ const Lucy = () => {
     }, [audio]);
 
     return [playing, playAudio, pauseAudio, toggle];
-  };
+  }; // end useAudio
   
   const lengthFudge = -0.08;
   const getThresholds = () => {
@@ -69,7 +69,7 @@ const Lucy = () => {
         // ((1+lengthFudge)/NUM_CAPTIONS)*13 + 0.02, // index 15
       ]
     )
-  }
+  };
   // On my way to memonizing thresholds, but this was enough
   const thresholds = getThresholds();
 
@@ -95,7 +95,7 @@ const Lucy = () => {
     [0, 360, 360, 0, 0]
   )  
 
- const [playing, playAudio, pauseAudio, toggle] = useAudio();
+  const [playing, playAudio, pauseAudio, toggle] = useAudio();
   
   useEffect(() => {
     scrollYProgress.onChange((value) => {
@@ -163,7 +163,7 @@ const Lucy = () => {
           setIsPinned(false)
         }
     })
-}, [scrollYProgress, thresholds, moreIndex])
+  }, [scrollYProgress, thresholds, moreIndex])
 
   const dissolve = {
     initial: { 
@@ -186,12 +186,12 @@ const Lucy = () => {
   const captionDissolves = captions.map((caption, index) => {
     const presetHTML = `${caption.text}`;
     return (
-      <InView 
+       <div 
         key={caption.label}
         as="div" 
         dangerouslySetInnerHTML={{ __html: presetHTML }}
       >
-      </InView>          
+      </div>         
     ) 
   })
 
@@ -242,8 +242,18 @@ const Lucy = () => {
     </div>{/*  /image-panel */}
 
     <div className="caption-panel">
-      <button className="audio-don-button" onClick={toggle}>{playing ? "Pause audio" : "Listen to audio"}</button>
+
+      <div>{/*  Opening caption */}
+        <h1>Enslaved at the Wells&rsquo; house.</h1>
+        <p>Scroll down to begin</p>
+        <button 
+          className="audio-don-button" 
+          onClick={toggle}>{playing ? "Pause audio" : "Listen to audio"}
+        </button>
+      </div>    
+
       { captionDissolves }
+
     </div>
     <div className="related-material">
       <article>

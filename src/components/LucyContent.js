@@ -20,11 +20,13 @@ const audios = [
   'dawn-birds',
 ];
 
+// const openingCaption = '<h1>Enslaved at the Wells&rsquo; house.</h1><p>Scroll down to begin</p>';
+
 const captions = [
-  {
-    label: '0 1st image - house exterior, sky dark stars visible, smoke animation',
-    text: '<h1>Enslaved at the Wells&rsquo; house.</h1><p>Scroll down to begin</p>',
-  },
+  // {
+  //   label: '0 1st image - house exterior, sky dark stars visible, smoke animation',
+  //   text: '<h1>Enslaved at the Wells&rsquo; house.</h1><p>Scroll down to begin</p>',
+  // },
   {
     label: '1 2nd image, house exterior, sky lightens',
     text: '<p>In colonial New England, work days for enslaved people begin long before daybreak—long before their enslavers get up to begin their own work days.</p>',
@@ -131,5 +133,6 @@ const mores = [
 ];
 export {images}
 export {audios}
+// export {openingCaption}
 export {captions}
 export {mores}
