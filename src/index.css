@@ -82,6 +82,24 @@ img {
   font-weight: bold;
 }
 
+.caption-panel div.title-panel {
+  background-color: transparent;
+  border: none;
+  margin-top: -340px;
+}
+
+.caption-panel div.title-panel h1 {
+  color: #ffeaea;
+  font-size: 3em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.caption-panel div.title-panel p {
+  color: #fff;
+}
+
 .related-material {
   background-color: white;
   display: grid;

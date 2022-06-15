@@ -198,7 +198,7 @@ const Lucy = () => {
   return (
     <section className='main-section'>    
       <div className="chapter-title">
-        <h1>Lucy Terry Prince - Enslaved at the Wells&rsquo; House</h1>
+        <h1>Lucy Terry Prince - Enslaved at the Wells House</h1>
       </div>
       <div className="image-panel"> 
 
@@ -243,12 +243,12 @@ const Lucy = () => {
 
     <div className="caption-panel">
 
-      <div>{/*  Opening caption */}
-        <h1>Enslaved at the Wells&rsquo; house.</h1>
-        <p>Scroll down to begin</p>
+      <div className="title-panel">{/*  Opening caption */}
+        <h1>Enslaved at the Wells house.</h1>
+        <p>Scroll down to begin...</p>
         <button 
           className="audio-don-button" 
-          onClick={toggle}>{playing ? "Pause audio" : "Listen to audio"}
+          onClick={toggle}>{playing ? "pause audio" : "play audio"}
         </button>
       </div>    
 
@@ -257,7 +257,7 @@ const Lucy = () => {
     </div>
     <div className="related-material">
       <article>
-        <h1>Enslaved at the Wells&apos; House</h1>
+        <h1>Enslaved at the Wells House</h1>
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
       </article>
 
