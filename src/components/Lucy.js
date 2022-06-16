@@ -47,9 +47,9 @@ const Lucy = () => {
     return [playing, playAudio, pauseAudio, toggle];
   }; // end useAudio
   
-  const lengthFudge = -0.08;
+  const lengthFudge = -0.1;
   const lucysConstant = (1+lengthFudge)/NUM_CAPTIONS;
-  const julietsConstant = 0.01; // makes picture appear sooner relative to caption
+  const julietsConstant = 0.015; // makes picture appear sooner relative to caption
   const getThresholds = () => {
     return (
       [
