@@ -140,6 +140,11 @@ img {
   padding-left: 0px;
 }
 
+.related-lists ul li {
+  line-height: 1.2em;
+  padding: .5em 0;
+}
+
 .hidden {
   display: none;
 }

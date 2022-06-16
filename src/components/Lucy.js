@@ -259,6 +259,7 @@ const Lucy = () => {
     <div className="related-material">
       <article>
         <h1>Enslaved at the Wells House</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
       </article>
 
@@ -271,51 +272,59 @@ const Lucy = () => {
           <li><a href="/">Hannibal</a></li>
           <li><a href="/">Jenny (Jin) Cole</a></li>
           <li><a href="/">Humphrey</a></li>
+          <li><a href="/">Cato</a></li>
           <li><a href="/">Pompey</a></li>
           <li><a href="/">Titus</a></li>
+          <li><a href="/">Phillis Wheatley</a></li>
         </ul>
 
         <h2>How Do We Know?</h2>
         <ul>
-          <li><a href="/">Rhode Island law about black people out after curfew, 1703</a></li>
+          <li><a href="/">1723 Boston Law forbidding enslaved people to be out at night or to be found <em>idling or lurking together</em></a></li>
           <li><a href="/">Records of the First Church in Deerfield June 15, 1731-1810</a></li>
           <li><a href="/">Deerfield History, by Pliny Arms, 1840</a></li>
-          <li><a href="/">Account book of Elijah Williams Store, 1745</a></li>
+          <li><a href="/">Account Book of Joseph Barnard</a></li>
           <li><a href="/">Account books of Dr. Thomas Williams, 1749,1751, 1754, 1756</a></li>
           <li><a href="/">Wethersfield Justice of the Peace Files 174-1900</a></li>
-          <li><a href="/">Catharine Maria Sedgewick, "Slavery in New England", 1853</a></li>
-          <li><a href="/">James MacSparran, A letter book and Abstract of Out Services Wrtten during the Years 1743-1751</a></li>
+          <li><a href="/">Catharine Maria Sedgewick, &ldquo;Slavery in New England&rdquo;, 1853</a></li>
+          <li><a href="/">A Dress Up Activity: Women&apos;s Clothing from 1750</a></li>
+          <li><a href="/">Floor Plans of the Wells House</a></li>
           <li><a href="/">Family Bible Owned by David Hoyt, 1762</a></li>
-          <li><a href="/">Lidded Hanging Pot, 1700-1799</a></li>
-          <li><a href="/">Bake Kettle</a></li>
+          <li><a href="/">Lidded Hanging Pot</a></li>
+          <li><a href="/">Iron Bake Kettle</a></li>
+          <li><a href="/">Straw Mattress and Bedding</a></li>
+          <li><a href="/">Canopied Bed</a></li>
           <li><a href="/">Side Chair</a></li>
           <li><a href="/">&ldquo;SW&rdquo; Joined Chest</a></li>
           <li><a href="/">Calico Pocket</a></li>
+          <li><a href="/">Candlestick</a></li>
           <li><a href="/">Gate-leg Table</a></li>
           <li><a href="/">Butter Churn</a></li>
+          <li><a href="/">How-to Video: Churning Butter</a></li>
           <li><a href="/">Tin-Glazed Earthenware Plate</a></li>
         </ul>
 
         <h2>Topics &amp; Ideas</h2>
         <ul>
-          <li><a href="/">Coworkers: Slaveowners in New England generally worked alongside their enslaved workers</a></li>
-          <li><a href="/">Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</a></li>
-          <li><a href="/">Everyday Resistance: quiet, non-violent forms of resistance</a></li>
-          <li><a href="/">Enslaved Person&apos;s Household Work</a></li>
-          <li><a href="/">Women&apos;s Work and Men&apos;s Work</a></li>
+          <li><a href="/">Everyday Work in Colonial Households</a></li>
+          <li><a href="/">Who Did What? Work Roles of Enslavers and Their Enslaved Workers</a></li>
           <li><a href="/">Sleeping Arrangements: in New England, enslaved people and their enslavers shared houses</a></li>
+          <li><a href="/">18th Century Foodways in New England: enslaved people were often the household cooks, what did they prepare?</a></li>
+          <li><a href="/">Women&apos;s Work and Men&apos;s Work</a></li>
+          <li><a href="/">Seasonal Chores: in New England the seasons played a large role in daily work</a></li>
+          <li><a href="/">Selling the Labor of Enslaved People</a></li>
+          <li><a href="/">Everyday Resistance: quiet, non-violent forms of resistance</a></li>
+          <li><a href="/">Social Lives of Enslaved People</a></li>
+          <li><a href="/">Working Conditions: enslavement in New England provided a wide range of social and psychological environments, from fairly supportive and even friendly to abusive.</a></li>
           <li><a href="/">The Bible and Religion in Domestic Life</a></li>
           <li><a href="/">Emotional relations between enslaver and enslaved sharing a house</a></li>
-          <li><a href="/">Seasonal Chores: in New England the seasons played a large role in daily work</a></li>
-          <li><a href="/">Foodways: enslaved people were often the household cooks, what did they prepare?</a></li>
-          <li><a href="/">Free Time: personal time of enslaved people</a></li>
           <li><a href="/">Literacy and Enslavement: enslaved people in New England were often taught to read and less often to write. Why the difference?</a></li>
         </ul>
 
-        <h2>Who Knew?</h2>
+        <h2>Myths &amp; Assumptions</h2>
         <ul>
-          <li>That enslavement everywhere in the colonies, including in New England, was like enslavement in the American South a generation later.</li>
-          <li>That enslaved people had no free time.</li>
+          <li><a href="/">Myth: Enslavement everywhere in the colonies, including in New England, was like enslavement in the American South a generation later.</a></li>
+          <li><a href="/">Myth: Enslaved People Had No Free Time</a></li>
         </ul>
 
         <h2>Where in the World?</h2>

@@ -47,7 +47,7 @@ const captions = [
   },
   {
     label: '6 7th image - cesar feeds the chickens',
-    text: '<p>Having renewed the fire, Caesar goes outside with a bucket of cracked corn to feed the chickens.</p>'
+    text: '<p>Having renewed the fire, Cesar goes outside with a bucket of cracked corn to feed the chickens.</p>'
   },
   {
     label: '7 8th image - Interlude',
